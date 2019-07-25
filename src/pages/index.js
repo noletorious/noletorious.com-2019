@@ -17,7 +17,7 @@ const IndexPage = () => (
           <h3><span role='img' aria-label="golfer">🏌️</span> My name is Noel, I create digital experiences for people.</h3>
         </Col>
         <Col xs={{span:6}} className={['d-flex','align-items-center'].join(' ')}>
-          <div className={['m-auto'].join(' ')} style={{ minWidth:`300px`, maxWidth: `300px`, marginBottom: `1.45rem` }}>
+          <div className={['m-auto'].join(' ')} style={{ minWidth:`300px`, marginBottom: `1.45rem` }}>
             <Image />
           </div>
         </Col>
