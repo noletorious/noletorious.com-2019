@@ -4,13 +4,29 @@ import Row from "react-bootstrap/Row"
 import Container from "react-bootstrap/Container"
 
 const Footer = () => (
-    <footer className={['d-flex','flex-column'].join(' ')}>
+    <footer className={['d-block','bg-warning'].join(' ')}>
         <Container>
-            <Col>
-                <Row>
-                    <p>THis is the footer!</p>
-                </Row>
-            </Col>
+            <Row>
+                <Col>
+                    <div className={['d-flex', 'align-items-center','justify-content-center'].join(' ')} style={{height:'200px'}}>
+                        <ul className={['mb-0','ml-0','list-group','list-group-horizontal'].join(' ')}>
+                            <li class="list-group-item">List item</li>
+                            <li class="list-group-item">List item</li>
+                            <li class="list-group-item">List item</li>
+                        </ul>
+                    </div>
+                </Col>
+                <Col>
+                    <div className={['d-flex', 'align-items-center','justify-content-center'].join(' ')} style={{height:'200px'}}>
+                        <p className="mb-0">Insert contact</p>
+                    </div>
+                </Col>
+                <Col>
+                    <div className={['d-flex', 'align-items-center','justify-content-center'].join(' ')} style={{height:'200px'}}>
+                        <p className="mb-0">Insert copyright</p>
+                    </div>
+                </Col>
+            </Row>
         </Container>
     </footer>
 )

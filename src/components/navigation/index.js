@@ -5,7 +5,7 @@ import Container from "react-bootstrap/Container"
 
 const Navigation = () => (
     
-        <Navbar collapseOnSelect expand="lg" bg="light" variant="light" className={['d-flex', 'flex-column'].join(' ')}>
+        <Navbar collapseOnSelect expand="lg" bg="light" variant="light">
             <Container>
                 <Nav>
                     <Nav.Link href="#">&larr;</Nav.Link>

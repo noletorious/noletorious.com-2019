@@ -1,10 +1,3 @@
-/**
- * Layout component that queries for data
- * with Gatsby's useStaticQuery component
- *
- * See: https://www.gatsbyjs.org/docs/use-static-query/
- */
-
 import React from "react"
 import PropTypes from "prop-types"
 
@@ -18,9 +11,7 @@ const Layout = ({ children }) => {
   return (
     <>
       <Navigation />
-      <div className={['d-flex','flex-column','flex-grow-1'].join(' ')}>
-          <main>{children}</main>
-      </div>
+        <main className={['d-flex','flex-column']}>{children}</main>
       <Footer />
     </>
   )
