@@ -1,8 +1,6 @@
 import React from "react"
 import PropTypes from "prop-types"
-
 import Navigation from "../../components/navigation"
-import Footer from "../../components/footer"
 
 import "bootstrap/dist/css/bootstrap.css"
 import "./home-layout.css"
@@ -10,9 +8,10 @@ import "./home-layout.css"
 const Layout = ({ children }) => {
   return (
     <>
-      <Navigation />
-        <main className={['d-flex','flex-column']}>{children}</main>
-      <Footer />
+      <div className={['h-100','d-flex','flex-column'].join(' ')}>
+        <Navigation />
+        <main className={['bg-secondary','flex-grow-1'].join(' ')}>{children}</main>
+      </div>
     </>
   )
 }

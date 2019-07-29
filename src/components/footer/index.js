@@ -4,15 +4,15 @@ import Row from "react-bootstrap/Row"
 import Container from "react-bootstrap/Container"
 
 const Footer = () => (
-    <footer className={['d-block','bg-warning'].join(' ')}>
+    <footer className={['bg-warning'].join(' ')}>
         <Container>
             <Row>
                 <Col>
                     <div className={['d-flex', 'align-items-center','justify-content-center'].join(' ')} style={{height:'200px'}}>
                         <ul className={['mb-0','ml-0','list-group','list-group-horizontal'].join(' ')}>
-                            <li class="list-group-item">List item</li>
-                            <li class="list-group-item">List item</li>
-                            <li class="list-group-item">List item</li>
+                            <li className="list-group-item">List item</li>
+                            <li className="list-group-item">List item</li>
+                            <li className="list-group-item">List item</li>
                         </ul>
                     </div>
                 </Col>

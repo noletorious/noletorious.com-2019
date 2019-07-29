@@ -1,11 +1,11 @@
-html, body, #___gatsby, #gatsby-focus-wrapper, main {
+html, body, #___gatsby, #gatsby-focus-wrapper {
     height:100%;
 }
-
+/* 
 #gatsby-focus-wrapper{
     display:flex;
     flex-direction: column;
-}
+} */
 
 .bg-accent{
     background-color:#FF377B;
