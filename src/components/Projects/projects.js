@@ -6,8 +6,8 @@ import Container from "react-bootstrap/Container"
 import Image from "../image"
 
 const TriMetProject = () => (
-        <Container id='trimet' fluid>
-            <Row className=''>
+        <Container id='projects' fluid>
+            <Row>
                 <Col xs={{span:4}} className={['text-white','d-flex','justify-content-center', 'align-items-center','flex-column','bg-danger'].join(' ')}>
                 <h3>This should be a Project</h3>
                 </Col>

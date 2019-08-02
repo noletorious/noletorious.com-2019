@@ -6,7 +6,14 @@ html, body, #___gatsby, #gatsby-focus-wrapper {
     display:flex;
     flex-direction: column;
 } */
+a{
+    color:#FF377B !important;
+}
 
 .bg-accent{
     background-color:#FF377B;
+}
+
+.bg-footer{
+    background-color:#202020;
 }

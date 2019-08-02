@@ -1,23 +1,35 @@
-import React from "react"
+import React,{Component} from "react"
 import PropTypes from "prop-types"
 import Navigation from "../../components/navigation"
+import Footer from "../../components/footer"
 
 import "bootstrap/dist/css/bootstrap.css"
 import "./home-layout.css"
 
-const Layout = ({ children }) => {
-  return (
-    <>
-      <div className={['h-100','d-flex','flex-column'].join(' ')}>
-        <Navigation />
-        <main className={['bg-secondary','flex-grow-1'].join(' ')}>{children}</main>
-      </div>
-    </>
-  )
+class HomeLayout extends Component {
+
+  constructor(props) {
+    super(props);
+      this.state = {
+        isHome: true
+      };
+  }
+
+  render(){
+    return (
+      <>
+        <div className={['position-absolute','w-100'].join(' ')}>
+          <Navigation checkHome={this.state.isHome}/>
+        </div>
+        <main>{this.props.children}</main>
+        <Footer />
+      </>
+    )
+  }
 }
 
-Layout.propTypes = {
+HomeLayout.propTypes = {
   children: PropTypes.node.isRequired,
 }
 
-export default Layout
+export default HomeLayout
