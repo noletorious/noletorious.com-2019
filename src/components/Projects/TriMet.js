@@ -6,13 +6,13 @@ import Container from "react-bootstrap/Container"
 import Image from "../image"
 
 const TriMetProject = () => (
-        <Container className='h-100' fluid>
-            <Row className='h-100'>
-                <Col xs={{span:6}} className={['text-white','d-flex','justify-content-center', 'align-items-center','flex-column','bg-danger'].join(' ')}>
+        <Container id='trimet' fluid>
+            <Row className=''>
+                <Col xs={{span:4}} className={['text-white','d-flex','justify-content-center', 'align-items-center','flex-column','bg-danger'].join(' ')}>
                 <h3>This should be a Project</h3>
                 </Col>
-                <Col xs={{span:6}} className={['d-flex','align-items-center'].join(' ')}>
-                <div className={['m-auto'].join(' ')} style={{ minWidth:`300px`, marginBottom: `1.45rem` }}>
+                <Col xs={{span:8}} className={['d-flex','align-items-center'].join(' ')}>
+                <div className={['w-100'].join(' ')} style={{ width:`100%`}}>
                     <Image />
                 </div>
                 </Col>
