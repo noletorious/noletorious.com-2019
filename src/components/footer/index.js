@@ -1,6 +1,7 @@
 import React from "react"
 import Col from "react-bootstrap/Col"
 import Row from "react-bootstrap/Row"
+import {Link} from 'gatsby'
 import Container from "react-bootstrap/Container"
 import footerStyle from './footer.module.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -38,7 +39,7 @@ const Footer = () => (
                 </Col>
                 <Col>
                     <div className={['d-flex', 'align-items-center','justify-content-center'].join(' ')} style={{height:'200px'}}>
-                        <p className={['mb-0','text-white','text-mute',].join(' ')}>Insert weather widget</p>
+                        <p className={['mb-0','text-white','text-mute',].join(' ')}>Insert weather widget<Link to="/about">About</Link></p>
                     </div>
                 </Col>
             </Row>

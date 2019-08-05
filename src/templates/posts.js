@@ -1,7 +1,7 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 
-import Navigation from '../components/navigation/'
+import Layout from '../layouts/page'
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
@@ -11,7 +11,7 @@ export default function Template({ data }) {
     //const post = data.markdownRemark;
     return (
         <>
-            <Navigation />
+            <Layout>         
             <Container className="pt-5">
                 <Row>
                     <Col>
@@ -23,6 +23,7 @@ export default function Template({ data }) {
                     </Col>
                 </Row>
             </Container>
+            </Layout>
         </>
         )
 }

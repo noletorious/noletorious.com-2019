@@ -9,6 +9,7 @@ import React,{Component} from "react"
 import PropTypes from "prop-types"
 
 import Navigation from "../../components/navigation"
+import HomePageSection from "../../components/homePageSection"
 import Footer from "../../components/footer"
 
 import "bootstrap/dist/css/bootstrap.css"
@@ -18,30 +19,27 @@ class Layout extends Component {
 
   constructor(props) {
     super(props);
-      this.state = {
-        isHome: true
-      };
+    this.state = {
+      checkIsHomePage: this.props.page ? true : false
+    };
   }
 
   render(){
     return (
       <>
-        <Navigation checkHome={this.state.isHome}/>
-        <div className={['d-flex','flex-column','flex-grow-1'].join(' ')}>
-            <main>{this.props.children}</main>
-        </div>
+        {this.state.checkIsHomePage ? 
+          <div className='vh-100 d-flex flex-column bg-primary'>
+              <Navigation isHome = {this.state.checkIsHomePage}/>
+              <HomePageSection />
+          </div>
+          : <Navigation isHome = {this.state.checkIsHomePage}/>
+        }
+        <main className={['d-flex','flex-column'].join(' ')}>{this.props.children}</main>
         <Footer />
       </>
     )
   }
 }
-
-
-
-
-
-
-
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
