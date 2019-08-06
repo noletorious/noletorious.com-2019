@@ -1,20 +1,40 @@
-import React,{useState} from 'react'
-import { useSpring, animated } from 'react-spring/renderprops'
-import { TransitionPortal} from 'gatsby-plugin-transition-link'
+import React from 'react'
+import { SpringLink } from './springLink'
+import { Spring } from 'react-spring/renderprops'
+import { TransitionState } from 'gatsby-plugin-transition-link'
+import {Link} from 'gatsby'
 
 const Navigation = (props) => {
-    const[isHome, setIsHome] = useState(props.isHome)
-    const isHomeToggle = useSpring({
-        height: isHome ? '50vh' : 'auto'
-    })
-
     return (
-        <>
-            <TransitionPortal level="top">
-                <animated.div className="d-flex flex-column p-5 bg-warning" style={isHomeToggle}>
-                    {props.isHome ? <p>true</p> : <p>false</p>}
-                </animated.div>
-            </TransitionPortal>
+      <>
+        <TransitionState>
+          {({ transitionStatus, exit, entry }) => {
+            const mount = [ 'entering','entered'].includes(transitionStatus)
+            // const seconds = mount ? entry.length : exit.length
+
+            return (
+              <Spring
+                to={{
+                  height: mount && props.isHome ? '50%':'100px'
+                }}
+              >
+                {props => 
+                  <div className="bg-white border-bottom d-flex d-flex-row align-items-center" style={props}>
+                      <div class="mr-auto p-2">
+                        <Link to="/">HOME</Link>
+                      </div>
+                      <div class="p-2">
+                        <SpringLink to="/about">About</SpringLink>
+                      </div>
+                      <div class="p-2">
+                        <SpringLink to="/#projects">Work</SpringLink>
+                      </div>
+                  </div>
+              }
+              </Spring>
+            )
+          }}
+        </TransitionState>
       </>
     )
 }
