@@ -6,7 +6,7 @@ import Container from "react-bootstrap/Container"
 import footerStyle from './footer.module.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faDribbble, faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons'
-
+ 
 const Footer = () => (
     <footer className={['bg-footer'].join(' ')}>
         <Container>
@@ -39,7 +39,7 @@ const Footer = () => (
                 </Col>
                 <Col>
                     <div className={['d-flex', 'align-items-center','justify-content-center'].join(' ')} style={{height:'200px'}}>
-                        <p className={['mb-0','text-white','text-mute',].join(' ')}>Insert weather widget<Link to="/about">About</Link></p>
+                        <p className={['mb-0','text-white','text-mute',].join(' ')}>Insert weather widget</p>
                     </div>
                 </Col>
             </Row>
