@@ -5,8 +5,8 @@ import TransitionLink from 'gatsby-plugin-transition-link'
 const SpringLink = ({ to, children }) => (
   <TransitionLink 
     to={to} 
-    exit={{ length: 1, delay:0 }}
-    entry={{ delay:1, length: 0}}
+    exit={{ length:.75 }}
+    entry={{ delay:.75,length: .75}}
     >
       {children}
   </TransitionLink>

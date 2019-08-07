@@ -4,7 +4,7 @@ import Row from "react-bootstrap/Row"
 import Container from "react-bootstrap/Container"
 import {Link} from "gatsby"
 
-import Image from "../image"
+import Image from "../images/image"
 
 const Projects = () => (
         <Container className="vh-100" id='projects' fluid>

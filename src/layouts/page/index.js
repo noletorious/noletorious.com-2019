@@ -9,8 +9,11 @@ import React,{Component} from "react"
 import PropTypes from "prop-types"
 
 import Navigation from "../../components/navigation"
-// import HomePageSection from "../../components/homePageSection"
+import HomePageSection from "../../components/homePageSection"
 import Footer from "../../components/footer"
+
+import { Spring } from 'react-spring/renderprops'
+import { TransitionState } from 'gatsby-plugin-transition-link'
 
 import "bootstrap/dist/css/bootstrap.css"
 
@@ -27,15 +30,40 @@ class Layout extends Component {
   render(){
     return (
       <>
-      <Navigation isHome = {this.state.checkIsHomePage}/>
-        {/* {this.state.checkIsHomePage ? 
-          <div className='vh-100 d-flex flex-column'>
-              <Navigation isHome = {this.state.checkIsHomePage}/>
-              <HomePageSection />
-          </div>
-          : <Navigation isHome = {this.state.checkIsHomePage}/>
-        } */}
-        <main className={['d-flex','flex-column'].join(' ')}>{this.props.children}</main>
+
+        <TransitionState>
+          {({ transitionStatus }) => {
+            const mount = [ 'entering','entered'].includes(transitionStatus)
+            const exitStatus = [ 'exiting','exited'].includes(transitionStatus)
+            return (
+              <Spring
+                from={{
+                  opacity: exitStatus ? 0 : 1,
+                  transform: `translateY(${exitStatus ? '10px' : 0})`
+                }}
+                to={{
+                  opacity: mount ? 1 : 0,
+                  transform: `translateY(${mount ? 0 : '10px'})`
+                }}
+              >
+                {props =>
+                  <div> 
+                    {this.state.checkIsHomePage ? 
+                      <div className='vh-100 d-flex flex-column'>
+                          <Navigation isHome = {this.state.checkIsHomePage}/>
+                          <HomePageSection />
+                      </div>
+                      : <Navigation isHome = {this.state.checkIsHomePage}/>
+                    }
+                    <main className={['d-flex','flex-column'].join(' ')} style={props}>
+                      {this.props.children}
+                    </main>
+                  </div>
+              }
+              </Spring>
+            )
+          }}
+        </TransitionState>
         <Footer />
       </>
     )

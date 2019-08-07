@@ -4,7 +4,7 @@ import Col from "react-bootstrap/Col"
 import Row from "react-bootstrap/Row"
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import {faLongArrowAltDown} from '@fortawesome/free-solid-svg-icons'
-import Image from '../image'
+import Image from '../images/chromeMac'
 import {Link} from 'gatsby'
 import SEO from "../../components/seo"
 
@@ -19,7 +19,7 @@ const HomePageSection = () => {
                 <h3>My name is Noel, <br />I create digital experiences for people.</h3>
                 <p><Link to="#projects"><FontAwesomeIcon icon={faLongArrowAltDown} size="lg"/></Link></p>
                 </Col>
-                <Col xs={{span:12}} sm={{span:6}} className={['d-flex','align-items-center'].join(' ')}>
+                <Col xs={{span:12}} sm={{span:6}} className={['d-flex','align-items-center','bg-accent'].join(' ')}>
                 <div className={['m-auto','img-fluid','w-100'].join(' ')}>
                     <Image />
                 </div>
