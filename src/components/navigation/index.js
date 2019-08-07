@@ -10,26 +10,35 @@ const Navigation = (props) => {
         <TransitionState>
           {({ transitionStatus, exit, entry }) => {
             const mount = [ 'entering','entered'].includes(transitionStatus)
+            const exitStatus= [ 'exiting','exited'].includes(transitionStatus)
             // const seconds = mount ? entry.length : exit.length
+            console.log('exit object is', exit)
+            console.log('enter object is', entry)
+            console.log('exitSttus boolean is', exitStatus)
+            console.log('transitionstatus is', transitionStatus)
+            console.log('++++++++++++++++++++++++++++++++++++++++++')
 
             return (
               <Spring
+                from={{
+                  height: exitStatus && props.isHome ? '100px':'50vh'
+                }}
                 to={{
-                  height: mount && props.isHome ? '50%':'100px'
+                  height: mount && !props.isHome ? '100px':'100px'
                 }}
               >
                 {props => 
-                  <div className="bg-white border-bottom d-flex d-flex-row align-items-center" style={props}>
-                      <div class="mr-auto p-2">
-                        <Link to="/">HOME</Link>
-                      </div>
-                      <div class="p-2">
-                        <SpringLink to="/about">About</SpringLink>
-                      </div>
-                      <div class="p-2">
-                        <SpringLink to="/#projects">Work</SpringLink>
-                      </div>
-                  </div>
+                    <div className="bg-white d-flex d-flex-row align-items-center border-bottom" style={props}>
+                        <div className="mr-auto p-2">
+                          <SpringLink to="/">HOME</SpringLink>
+                        </div>
+                        <div className="p-2">
+                          <SpringLink to="/about">About</SpringLink>
+                        </div>
+                        <div className="p-2">
+                          <Link to="/#projects">Work</Link>
+                        </div>
+                    </div>
               }
               </Spring>
             )

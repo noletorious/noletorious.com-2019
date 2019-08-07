@@ -1,7 +1,7 @@
 import React from "react"
 import Col from "react-bootstrap/Col"
 import Row from "react-bootstrap/Row"
-import {Link} from 'gatsby'
+// import {Link} from 'gatsby'
 import Container from "react-bootstrap/Container"
 import footerStyle from './footer.module.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
