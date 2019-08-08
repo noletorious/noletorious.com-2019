@@ -3,7 +3,9 @@ import { SpringLink } from './springLink'
 import { Spring } from 'react-spring/renderprops'
 import { TransitionState } from 'gatsby-plugin-transition-link'
 import {Link} from 'gatsby'
-
+import Container from 'react-bootstrap/Container'
+import Row from 'react-bootstrap/Row'
+import Col from 'react-bootstrap/Col'
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import {faCaretLeft} from '@fortawesome/free-solid-svg-icons'
 
@@ -23,56 +25,84 @@ const Navigation = (props) => {
             console.log('enter object is', entry)
             console.log('exitSttus boolean is', exitStatus)
             console.log('transitionstatus is', transitionStatus)
+            console.log('is Home Status is', isHomeStatus)
             console.log('++++++++++++++++++++++++++++++++++++++++++')
 
             return (
               <Spring
                 from={{
-                  height: props.isHome && mount ? '300px':'100px'
+                  paddingTop: props.isHome && mount ? '20%' :'2%',
+                  paddingBottom: props.isHome && mount ? '20%' :'2%'
                 }}
                 to={{
-                  height: props.isHome && mount ? '300px': !props.isHome && mount ? '100px' : '100px'
+                  paddingTop: props.isHome && mount ? '20%' : !props.isHome && mount ? '2%' : '2%',
+                  paddingBottom: props.isHome && mount ? '20%' : !props.isHome && mount ? '2%' : '2%'
                 }}
               >
                 {props => 
-                    <div className="bg-white d-flex d-flex-row flex-wrap-reverse align-items-center border-bottom" style={props}>
-                        <div className="p-2">
-                            {!isHomeStatus ?   
-                              <Link 
-                                title="Go back" 
-                                onSelect={(e)=>{
-                                  window.history.back()
-                                  }
-                                } 
-                                href='#' 
-                                className={['align-items-center','d-flex','pl-3'].join(' ')}
-                                >
-                                  <FontAwesomeIcon icon={faCaretLeft} size="lg"/>
-                              </Link>
-                            : null}
-                        </div>
-                        <div className="p-2">
-                          <SpringLink to="/">
-                            <span aria-label="noletorious" role='img' className={navigationStyle.n}>🏌️</span>
-                          </SpringLink>
-                        </div>
-                        <div className="p-2">
-                          <p 
-                            className='mb-0 text-dark'
-                            style={{
-                                fontSize:'120%'
-                            }}>Noel Torres</p>
-                            <h6 className='mb-0 text-dark'>Web Designer · Portland, Oregon</h6>
-                        </div>
-                        <div className="ml-auto p-2">
-                          <SpringLink to="/about">About</SpringLink>
-                        </div>
-                        <div className="p-2">
-                          <Link to="/evolution-of-my-portfolio">Latest</Link>
-                        </div>
-                        <div className="p-2">
-                          <Link to="/#projects">Work</Link>
-                        </div>
+                    <div id='nav' className="bg-white d-flex d-flex-row flex-wrap align-items-center border-bottom" style={props}>
+                        <Container>
+                          <Row>
+                            {/* Back, Home, Name and Title */}
+                            <Col className="d-flex flex-row align-items-center" xs={{span:12}} sm={{span:8}}>
+                              
+                                <Spring
+                                  from={{
+                                    display: mount && isHomeStatus ? 'block' : mount && !isHomeStatus ? 'block':'block',
+                                    opacity: mount && isHomeStatus ? 1 : mount && !isHomeStatus ? 1:1
+                                  }}
+                                  to={{
+                                    display:mount && isHomeStatus ? 'none' : mount && !isHomeStatus ? 'block':'block',
+                                    opacity: mount && isHomeStatus ? 0 : mount && !isHomeStatus ? 1:1
+                                }}
+                                >{prop=>
+                                  <div className="p-2" style={prop}>
+                                  <Link 
+                                  title="Go back" 
+                                  onClick={()=>{
+                                    window.history.back(-1)
+                                    }
+                                  } 
+                                  href='#' 
+                                  className={['align-items-center','d-flex','pl-3'].join(' ')}
+                                  >
+                                    <FontAwesomeIcon icon={faCaretLeft} size="lg" />
+                                </Link>
+                                </div>
+                                }
+                                  
+                                </Spring> 
+                                  
+                              
+                              <div className="p-2">
+                                <SpringLink to="/">
+                                  <span aria-label="noletorious" role='img' className={navigationStyle.n}>🏌️</span>
+                                </SpringLink>
+                              </div>
+                              <div className="p-2">
+                                <p 
+                                  className='mb-0 text-dark'
+                                  style={{
+                                      fontSize:'120%'
+                                  }}>Noel Torres</p>
+                                  <h6 className='mb-0 text-dark'>Front-end Designer · Portland, OR</h6>
+                              </div>
+                            </Col>
+                            {/* About, Work */}
+                            <Col className="d-flex align-items-center nav-items" xs={{span:12}} sm={{span:4}}>
+                              
+                              <div className="ml-auto p-2">
+                                <SpringLink to="/about">About</SpringLink>
+                              </div>
+                              <div className="p-2">
+                                <SpringLink to="/evolution-of-my-portfolio">Latest</SpringLink>
+                              </div>
+                              <div className="p-2">
+                                <Link to="/#projects">Work</Link>
+                              </div>
+                            </Col>
+                          </Row>
+                        </Container>
                     </div>
               }
               </Spring>

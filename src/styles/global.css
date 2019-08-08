@@ -10,6 +10,16 @@ a{
     color:#FF377B !important;
 }
 
+#nav .nav-items a[aria-current="page"]{
+    opacity:50% !important;
+    border-bottom: solid;
+    padding-bottom: 6px;
+}
+#nav a:hover{
+    text-decoration: none;
+    cursor:pointer;
+}
+
 .bg-accent{
     background-color:#FF377B;
 }
