@@ -19,7 +19,7 @@ const Image = () => {
       placeholderImage: file(relativePath: { eq: "chrome-mac.png" }) {
         childImageSharp {
           fluid(
-            maxWidth: 800
+            maxWidth: 600
             quality: 100
           ) {
             ...GatsbyImageSharpFluid
@@ -29,7 +29,7 @@ const Image = () => {
     }
   `)
 
-  return <Img fluid={data.placeholderImage.childImageSharp.fluid} />
+  return <Img fluid={data.placeholderImage.childImageSharp.fluid} style={{margin:"0 auto", maxWidth:600}}/>
 }
 
 export default Image

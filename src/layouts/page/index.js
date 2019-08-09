@@ -35,14 +35,15 @@ class Layout extends Component {
           {({ transitionStatus }) => {
             const mount = [ 'entering','entered'].includes(transitionStatus)
             const exitStatus = [ 'exiting','exited'].includes(transitionStatus)
+            const transitionStatusPop = transitionStatus === 'POP' ? true : false
             return (
               <Spring
                 from={{
-                  opacity: exitStatus ? 0 : 1,
+                  opacity: mount ? 0 : 0,
                   transform: `translateY(${exitStatus ? '10px' : 0})`
                 }}
                 to={{
-                  opacity: mount ? 1 : 0,
+                  opacity: mount || transitionStatusPop ? 1 : 0,
                   transform: `translateY(${mount ? 0 : '10px'})`
                 }}
               >

@@ -21,22 +21,22 @@ const Navigation = (props) => {
             const mount = [ 'entering','entered'].includes(transitionStatus)
             const exitStatus= [ 'exiting','exited'].includes(transitionStatus)
             // const seconds = mount ? entry.length : exit.length
-            console.log('exit object is', exit)
-            console.log('enter object is', entry)
-            console.log('exitSttus boolean is', exitStatus)
-            console.log('transitionstatus is', transitionStatus)
-            console.log('is Home Status is', isHomeStatus)
-            console.log('++++++++++++++++++++++++++++++++++++++++++')
+            // console.log('exit object is', exit)
+            // console.log('enter object is', entry)
+            // console.log('exitSttus boolean is', exitStatus)
+            // console.log('transitionstatus is', transitionStatus)
+            // console.log('is Home Status is', isHomeStatus)
+            // console.log('++++++++++++++++++++++++++++++++++++++++++')
 
             return (
               <Spring
                 from={{
-                  paddingTop: props.isHome && mount ? '20%' :'2%',
-                  paddingBottom: props.isHome && mount ? '20%' :'2%'
+                  paddingTop: props.isHome && mount ? '20vh' :'2vh',
+                  paddingBottom: props.isHome && mount ? '20vh' :'2vh'
                 }}
                 to={{
-                  paddingTop: props.isHome && mount ? '20%' : !props.isHome && mount ? '2%' : '2%',
-                  paddingBottom: props.isHome && mount ? '20%' : !props.isHome && mount ? '2%' : '2%'
+                  paddingTop: props.isHome && mount ? '20vh' : !props.isHome && mount ? '2vh' : '2vh',
+                  paddingBottom: props.isHome && mount ? '20vh' : !props.isHome && mount ? '2vh' : '2vh'
                 }}
               >
                 {props => 
@@ -44,7 +44,7 @@ const Navigation = (props) => {
                         <Container>
                           <Row>
                             {/* Back, Home, Name and Title */}
-                            <Col className="d-flex flex-row align-items-center" xs={{span:12}} sm={{span:8}}>
+                            <Col className="d-flex flex-row align-items-center pl-0" xs={{span:12}} sm={{span:8}}>
                               
                                 <Spring
                                   from={{
@@ -57,17 +57,13 @@ const Navigation = (props) => {
                                 }}
                                 >{prop=>
                                   <div className="p-2" style={prop}>
-                                  <Link 
+                                  <button 
                                   title="Go back" 
-                                  onClick={()=>{
-                                    window.history.back(-1)
-                                    }
-                                  } 
-                                  href='#' 
-                                  className={['align-items-center','d-flex','pl-3'].join(' ')}
+                                  onClick={()=>window.history.go(-1)} 
+                                  className={['align-items-center','d-flex','px-0',navigationStyle.backBtn].join(' ')}
                                   >
                                     <FontAwesomeIcon icon={faCaretLeft} size="lg" />
-                                </Link>
+                                </button>
                                 </div>
                                 }
                                   
