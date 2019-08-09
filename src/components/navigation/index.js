@@ -2,7 +2,6 @@ import React from 'react'
 import { SpringLink } from './springLink'
 import { Spring } from 'react-spring/renderprops'
 import { TransitionState } from 'gatsby-plugin-transition-link'
-import {Link} from 'gatsby'
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
@@ -19,7 +18,7 @@ const Navigation = (props) => {
         <TransitionState>
           {({ transitionStatus, exit, entry }) => {
             const mount = [ 'entering','entered'].includes(transitionStatus)
-            const exitStatus= [ 'exiting','exited'].includes(transitionStatus)
+            // const exitStatus= [ 'exiting','exited'].includes(transitionStatus)
             // const seconds = mount ? entry.length : exit.length
             // console.log('exit object is', exit)
             // console.log('enter object is', entry)
@@ -94,7 +93,7 @@ const Navigation = (props) => {
                                 <SpringLink to="/evolution-of-my-portfolio">Latest</SpringLink>
                               </div>
                               <div className="p-2">
-                                <Link to="/#projects">Work</Link>
+                                <a href="/#projects">Work</a>
                               </div>
                             </Col>
                           </Row>
