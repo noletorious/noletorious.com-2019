@@ -29,7 +29,7 @@ const Image = () => {
     }
   `)
 
-  return <Img fluid={data.placeholderImage.childImageSharp.fluid} style={{margin:"0 auto", maxWidth:600}}/>
+  return <Img fluid={data.placeholderImage.childImageSharp.fluid} style={{margin:"0 auto", maxWidth:500}}/>
 }
 
 export default Image

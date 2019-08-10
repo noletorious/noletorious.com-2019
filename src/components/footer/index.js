@@ -10,6 +10,7 @@ import axios from 'axios'
 const Footer = () => {
 
     const [data, setData] = useState(null)
+    
 
     useEffect(() => {
         console.log('======useEffect======')
@@ -54,11 +55,12 @@ const Footer = () => {
                 </Col>
                 <Col xs={{span:12}} sm={{span:4}}>
                     <div className={['d-flex', 'align-items-center','justify-content-center'].join(' ')}>
-                        <p className={['mb-0','text-white','text-mute'].join(' ')}>
+                        <h6 className={['mb-0','text-white','text-mute'].join(' ')}>
                             {data ?
-                            data.name + ", OR " + "insertWeatherIcon" + " " + Math.round(data.main.temp)+"°F" 
-                            : 'Loading weather data...'}
-                        </p>
+                                data.name + ", OR " + Math.round(data.main.temp)+"°F" 
+                                : 'Loading weather data...'}
+                        </h6>
+                        <img src={data ? "http://openweathermap.org/img/w/" + data.weather[0].icon + ".png" : null} alt="weather icon" style={{width:'30px',marginBottom:'0'}}/>
                     </div>
                 </Col>
             </Row>

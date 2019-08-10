@@ -30,7 +30,6 @@ class Layout extends Component {
   render(){
     return (
       <>
-
         <TransitionState>
           {({ transitionStatus }) => {
             const mount = [ 'entering','entered'].includes(transitionStatus)
@@ -52,11 +51,11 @@ class Layout extends Component {
                     {this.state.checkIsHomePage ? 
                       <div className='vh-100 d-flex flex-column'>
                           <Navigation isHome = {this.state.checkIsHomePage}/>
-                          <HomePageSection />
+                          <HomePageSection style={props} />
                       </div>
                       : <Navigation isHome = {this.state.checkIsHomePage}/>
                     }
-                    <main className={['d-flex','flex-column'].join(' ')} style={props}>
+                    <main className={['d-flex','flex-column'].join(' ')} style={props} >
                       {this.props.children}
                     </main>
                   </div>

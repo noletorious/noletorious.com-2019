@@ -31,16 +31,16 @@ const Navigation = (props) => {
               <Spring
                 from={{
                   paddingTop: props.isHome && mount ? '20vh' :'2vh',
-                  paddingBottom: props.isHome && mount ? '20vh' :'2vh'
+                  paddingBottom: props.isHome && mount ? '15vh' :'2vh'
                 }}
                 to={{
                   paddingTop: props.isHome && mount ? '20vh' : !props.isHome && mount ? '2vh' : '2vh',
-                  paddingBottom: props.isHome && mount ? '20vh' : !props.isHome && mount ? '2vh' : '2vh'
+                  paddingBottom: props.isHome && mount ? '15vh' : !props.isHome && mount ? '2vh' : '2vh'
                 }}
               >
                 {props => 
                     <div id='nav' className="bg-white d-flex d-flex-row flex-wrap align-items-center border-bottom" style={props}>
-                        <Container>
+                        <Container className="px-0">
                           <Row>
                             {/* Back, Home, Name and Title */}
                             <Col className="d-flex flex-row align-items-center pl-0" xs={{span:12}} sm={{span:8}}>
@@ -67,7 +67,8 @@ const Navigation = (props) => {
                                 }
                                   
                                 </Spring> 
-                                  
+
+                              {/* Make the golfer logo way large on the home page.     */}
                               
                               <div className="p-2">
                                 <SpringLink to="/">
@@ -80,7 +81,7 @@ const Navigation = (props) => {
                                   style={{
                                       fontSize:'120%'
                                   }}>Noel Torres</p>
-                                  <h6 className='mb-0 text-dark'>Front-end Designer · Portland, OR</h6>
+                                  <h6 className='mb-0 text-dark'>Front-end Designer</h6>
                               </div>
                             </Col>
                             {/* About, Work */}
