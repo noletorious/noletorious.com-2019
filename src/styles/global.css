@@ -9,6 +9,9 @@ html, body, #___gatsby, #gatsby-focus-wrapper {
 a,button{
     color:#FF377B !important;
 }
+a:hover{
+    text-decoration: none !important;
+}
 
 #nav .nav-items a[aria-current="page"]{
     opacity:50% !important;

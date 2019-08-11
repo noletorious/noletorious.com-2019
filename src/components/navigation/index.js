@@ -1,6 +1,7 @@
 import React from 'react'
 import { SpringLink } from './springLink'
 import { Spring } from 'react-spring/renderprops'
+import {Link} from 'gatsby'
 import { TransitionState } from 'gatsby-plugin-transition-link'
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
@@ -40,7 +41,7 @@ const Navigation = (props) => {
               >
                 {props => 
                     <div id='nav' className="bg-white d-flex d-flex-row flex-wrap align-items-center border-bottom" style={props}>
-                        <Container className="px-0">
+                        <Container>
                           <Row>
                             {/* Back, Home, Name and Title */}
                             <Col className="d-flex flex-row align-items-center pl-0" xs={{span:12}} sm={{span:8}}>
@@ -91,10 +92,12 @@ const Navigation = (props) => {
                                 <SpringLink to="/about">About</SpringLink>
                               </div>
                               <div className="p-2">
-                                <SpringLink to="/evolution-of-my-portfolio">Latest</SpringLink>
+                                <SpringLink to="/blog">Latest</SpringLink>
                               </div>
                               <div className="p-2">
-                                <a href="/#projects">Work</a>
+                                <Link 
+                                  to="/#work">Work
+                                </Link>
                               </div>
                             </Col>
                           </Row>
