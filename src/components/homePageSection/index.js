@@ -5,7 +5,7 @@ import Row from "react-bootstrap/Row"
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import {faLongArrowAltDown} from '@fortawesome/free-solid-svg-icons'
 import Image from '../images/chromeMac'
-import {Link} from 'gatsby'
+// import {Link} from 'gatsby'
 import SEO from "../../components/seo"
 import Scrollchor from 'react-scrollchor';
 

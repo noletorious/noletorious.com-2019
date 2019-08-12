@@ -31,12 +31,12 @@ const Navigation = (props) => {
             return (
               <Spring
                 from={{
-                  paddingTop: props.isHome && mount ? '20vh' :'2vh',
-                  paddingBottom: props.isHome && mount ? '15vh' :'2vh'
+                  paddingTop: props.isHome && mount ? '15vh' :'2vh',
+                  paddingBottom: props.isHome && mount ? '12vh' :'2vh'
                 }}
                 to={{
-                  paddingTop: props.isHome && mount ? '20vh' : !props.isHome && mount ? '2vh' : '2vh',
-                  paddingBottom: props.isHome && mount ? '15vh' : !props.isHome && mount ? '2vh' : '2vh'
+                  paddingTop: props.isHome && mount ? '15vh' : !props.isHome && mount ? '2vh' : '2vh',
+                  paddingBottom: props.isHome && mount ? '12vh' : !props.isHome && mount ? '2vh' : '2vh'
                 }}
               >
                 {props => 
@@ -44,7 +44,7 @@ const Navigation = (props) => {
                         <Container>
                           <Row>
                             {/* Back, Home, Name and Title */}
-                            <Col className="d-flex flex-row align-items-center pl-0" xs={{span:12}} sm={{span:8}}>
+                            <Col className="d-flex flex-row align-items-center pl-0 flex-xs-column" xs={{span:12}} sm={{span:8}}>
                               
                                 <Spring
                                   from={{
@@ -70,20 +70,29 @@ const Navigation = (props) => {
                                 </Spring> 
 
                               {/* Make the golfer logo way large on the home page.     */}
+                              <Spring
+                                from={{
+                                  fontSize: mount && isHomeStatus ? '2.5em' : mount && !isHomeStatus ? '1em' :'1em' 
+                                }}
+                                to={{
+                                  fontSize: mount && isHomeStatus ? '2.5em' : mount && !isHomeStatus ? '1em' :'1em'
+                                }}
+                              >
+                                {props =>  
+                                <>
+                                  <div className="p-2" style={props}>
+                                    <SpringLink to="/">
+                                      <span aria-label="noletorious" role='img' className={navigationStyle.n}>🏌️</span>
+                                    </SpringLink>
+                                  </div>
+                                  <div className="p-2" style={props}>
+                                    <p className='mb-0 text-dark font-weight-bold'>Noel Torres</p>
+                                    <h6 className='mb-0 text-dark'>Front-end Designer</h6>
+                                  </div>
+                                  </>
+                              }
+                              </Spring>
                               
-                              <div className="p-2">
-                                <SpringLink to="/">
-                                  <span aria-label="noletorious" role='img' className={navigationStyle.n}>🏌️</span>
-                                </SpringLink>
-                              </div>
-                              <div className="p-2">
-                                <p 
-                                  className='mb-0 text-dark'
-                                  style={{
-                                      fontSize:'120%'
-                                  }}>Noel Torres</p>
-                                  <h6 className='mb-0 text-dark'>Front-end Designer</h6>
-                              </div>
                             </Col>
                             {/* About, Work */}
                             <Col className="d-flex align-items-center nav-items" xs={{span:12}} sm={{span:4}}>
