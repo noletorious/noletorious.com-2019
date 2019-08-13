@@ -30,3 +30,7 @@ a:hover{
 .bg-footer{
     background-color:#202020;
 }
+
+img{
+    margin-bottom:0;
+}

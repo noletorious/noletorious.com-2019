@@ -20,11 +20,13 @@ exports.createPages = ({actions, graphql})=>{
                         path
                         title
                         date(formatString: "MMMM DD, YYYY")
+                        
                     }
                 }
             }
         }
-    }`).then(res=>{
+    }
+    `).then(res=>{
         if(res.errors){
             return Promise.reject(res.errors);
         }
