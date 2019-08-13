@@ -24,7 +24,7 @@ export default function Blog({ data }) {
                   <Card.Title><h4>{post.frontmatter.title}</h4></Card.Title>
                   <Card.Subtitle className="mb-2 text-muted">{post.frontmatter.date}</Card.Subtitle>
                   <Card.Text className="small">
-                  {post.excerpt}...
+                  {post.frontmatter.excerpt}...
                   </Card.Text>
                   {/* <Img fluid={post.frontmatter.featuredImage.childImageSharp.fluid}/> */}
                 </Card.Body>
@@ -50,6 +50,7 @@ export const pageQuery = graphql`
                       frontmatter {
                         path 
                         title
+                        excerpt
                         date(formatString: "MMMM DD, YYYY")
                         featuredImage {
                           childImageSharp {

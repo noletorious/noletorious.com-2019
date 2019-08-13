@@ -32,15 +32,15 @@ const Navigation = (props) => {
               <Spring
                 from={{
                   paddingTop: props.isHome && mount ? '8vh' :'2vh',
-                  paddingBottom: props.isHome && mount ? '6vh' :'2vh'
+                  paddingBottom: props.isHome && mount ? '8vh' :'2vh'
                 }}
                 to={{
                   paddingTop: props.isHome && mount ? '8vh' : !props.isHome && mount ? '2vh' : '2vh',
-                  paddingBottom: props.isHome && mount ? '6vh' : !props.isHome && mount ? '2vh' : '2vh'
+                  paddingBottom: props.isHome && mount ? '8vh' : !props.isHome && mount ? '2vh' : '2vh'
                 }}
               >
                 {props => 
-                    <div id='nav' className="bg-white d-flex d-flex-row flex-wrap align-items-center border-bottom" style={props}>
+                    <div id='nav' className="bg-white d-flex d-flex-row flex-wrap align-items-center" style={props}>
                         <Container>
                           <Row>
                             {/* Back, Home, Name and Title */}
@@ -86,8 +86,8 @@ const Navigation = (props) => {
                                     </SpringLink>
                                   </div>
                                   <div className="p-2" style={props}>
-                                    <p className='mb-0 text-dark font-weight-bold'>Noel Torres</p>
-                                    <h6 className='mb-0 text-dark'>Front-end Designer</h6>
+                                    <p className='mb-0 text-light font-weight-bold'>Noel Torres</p>
+                                    <h6 className='mb-0 text-light'>Front-end Designer</h6>
                                   </div>
                                   </>
                               }

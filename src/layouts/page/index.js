@@ -11,7 +11,7 @@ import PropTypes from "prop-types"
 import Navigation from "../../components/navigation"
 import HomePageSection from "../../components/homePageSection"
 import Footer from "../../components/footer"
-
+import SEO from '../../components/seo'
 import { Spring } from 'react-spring/renderprops'
 import { TransitionState } from 'gatsby-plugin-transition-link'
 
@@ -30,6 +30,7 @@ class Layout extends Component {
   render(){
     return (
       <>
+        <SEO title="Noel Torres Portfolio"/>
         <TransitionState>
           {({ transitionStatus }) => {
             const mount = [ 'entering','entered'].includes(transitionStatus)

@@ -1,6 +1,10 @@
 html, body, #___gatsby, #gatsby-focus-wrapper {
     height:100%;
 }
+
+body{
+    background-color:#191919 !important;
+}
 /* 
 #gatsby-focus-wrapper{
     display:flex;
@@ -27,8 +31,12 @@ a:hover{
     background-color:#FF377B;
 }
 
-.bg-footer{
-    background-color:#202020;
+.bg-footer, #nav{
+    background-color:#101010 !important;
+}
+
+#nav.border-bottom{
+    border-bottom:1px solid #4a4a4a !important;
 }
 
 img{
