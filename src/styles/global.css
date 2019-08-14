@@ -2,7 +2,7 @@ html, body, #___gatsby, #gatsby-focus-wrapper {
     height:100%;
 }
 
-body{
+body, .body-bg{
     background-color:#191919 !important;
 }
 /* 
@@ -32,7 +32,7 @@ a:hover{
 }
 
 .bg-footer, #nav{
-    background-color:#101010 !important;
+    background-color:#101010  !important;
 }
 
 #nav.border-bottom{

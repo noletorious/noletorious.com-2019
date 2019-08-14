@@ -36,31 +36,39 @@ const About = () => {
   return(
   <Layout>
     <SEO title="About Noel" />
-    <Container className='my-5'>
+    <Container className='my-5 text-light'>
         <Row>
           <Col>
             <Img fluid={data.portlandImage.childImageSharp.fluid} fadeIn={true} durationFadeIn={1000} className='mb-5'/>
           </Col>
         </Row>
-        <Row>
-          <Col xs={{span:8, offset:2}} className="text-light ">
-            <h3>Portland's Favorite Web Designer  </h3>
-            <p>Famous for my hand modeling, I design and develop web interfaces. Creatively I'm a productionist, personally I am a INTP. As a web designer, I'd like to say I help solve problems and build helpful visual content that communicates a message. Learning and building web experiences that are meaningful and with thought is the fun in the challenge. </p>
-
-            <h5>Some personal goals</h5>
-            <p>Grow my clothing line</p>
-            <p></p>
-
+        <Row style={{marginTop:'-10em'}}>
+          <Col xs={{span:12}} sm={{span:8, offset:2}}>
+            <div className="px-3 body-bg">
+              {/* <Img
+                fluid={data.noelImage.childImageSharp.fluid} 
+                fadeIn={true} durationFadeIn={1000} 
+                className="rounded-circle"
+                style={{maxWidth:'100px'}}
+              /> */}
+              <h3 className="mb-0 py-3">Hello world!</h3>
+              <p>I’m an purpose-driven designer who cares about designing enjoyable products for <em>people</em>. I've worked in various web design roles from visual design, apparel design, content strategy, 2D animations, UX design, and web development. Through my experience I've developed an interdisciplinary skillset with an eye for what is good design and a focus on interaction design.</p>
+              &nbsp;
+            </div>
           </Col>
         </Row>
         <Row>
-          <Col>
-            <h5>When I'm not designing</h5>
-            <p>I'm probably thinking about designing.</p>
-          </Col>
-          <Col>
-            <h5>Designers I appreciate</h5>
-            <p>Ghostly ferns</p>
+          <Col xs={{span:12}} sm={{span:8, offset:2}}>
+            <div className="px-3">
+            <h5><span role="img" aria-label="artist">🎨 </span> My creative type:</h5>
+              <p><a target="_blank" href="https://mycreativetype.com/type/producer/" rel="noopener noreferrer">Producer</a></p>&nbsp;
+              <h5><span role="img" aria-label="golfer">🏌️</span> When I'm not designing:</h5>
+              <p>Probably golfing!</p>&nbsp;
+              <h5><span role="img" aria-label="designers">👍 </span>Designers I appreciate:</h5>
+              <p>Technically: Jared Spool, Visually: There are too many good UX designers out there, so I'm choosing an animator, Markus Magnusson.</p>&nbsp;
+              <h5><span role="img" aria-label="music">🎵</span> Current jam:</h5>
+              <p>Awake by Tycho</p>&nbsp;
+            </div>
           </Col>
         </Row>
     </Container>

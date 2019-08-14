@@ -2,7 +2,7 @@ import React from "react"
 import Col from "react-bootstrap/Col"
 import Row from "react-bootstrap/Row"
 import Container from "react-bootstrap/Container"
-import {Link} from "gatsby"
+import {SpringLink} from "../navigation/springLink"
 import Img from "gatsby-image"
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import {faLongArrowAltRight} from '@fortawesome/free-solid-svg-icons'
@@ -111,7 +111,7 @@ const Projects = () => {
         <Container className="vh-100" id='work' fluid>
             <Row className="h-50">
                 <Col xs={{span:12}} sm={{span:6}} className={['text-white'].join(' ')} style={trimetBg}>
-                  <Link to="/trimet">
+                  <SpringLink to="/trimet">
                     <div className="d-flex flex-row">
                       <div className="p-2 align-self-center">
                         TriMet <FontAwesomeIcon icon={faLongArrowAltRight}></FontAwesomeIcon>
@@ -120,10 +120,10 @@ const Projects = () => {
                         <Img fluid={data.trimetLogo.childImageSharp.fluid} style={{width:'50px'}}/>
                       </div>
                     </div>
-                  </Link>
+                  </SpringLink>
                 </Col>
                 <Col xs={{span:12}} sm={{span:6}} className={['text-white'].join(' ')} style={attensaBg}>
-                <Link to="/attensa">
+                <SpringLink to="/attensa">
                     <div className="d-flex flex-row">
                       <div className="p-2 align-self-center">
                         Attensa <FontAwesomeIcon icon={faLongArrowAltRight}></FontAwesomeIcon>
@@ -132,12 +132,12 @@ const Projects = () => {
                         <Img fluid={data.attensaLogo.childImageSharp.fluid} style={{width:'50px'}}/>
                       </div>
                     </div>
-                  </Link>
+                  </SpringLink>
                 </Col>
             </Row>
             <Row className="h-50">
                 <Col xs={{span:12}} sm={{span:6}} className={[].join('bg-black')} style={ctBg}>
-                <Link to="/trimet">
+                <SpringLink to="/trimet">
                     <div className="d-flex flex-row">
                       <div className="p-2 align-self-center">
                         Cascadia Threads <FontAwesomeIcon icon={faLongArrowAltRight}></FontAwesomeIcon>
@@ -146,10 +146,10 @@ const Projects = () => {
                         <Img fluid={data.ctLogo.childImageSharp.fluid} style={{width:'50px'}}/>
                       </div>
                     </div>
-                  </Link>
+                  </SpringLink>
                 </Col>
                 <Col xs={{span:12}} sm={{span:6}} className={[].join(' ')} style={hopBg}>
-                <Link to="/trimet">
+                <SpringLink to="/trimet">
                     <div className="d-flex flex-row">
                       <div className="p-2 align-self-center">
                         Hop Fastpass <FontAwesomeIcon icon={faLongArrowAltRight}></FontAwesomeIcon>
@@ -158,7 +158,7 @@ const Projects = () => {
                         <Img fluid={data.hopLogo.childImageSharp.fluid} style={{width:'50px'}}/>
                       </div>
                     </div>
-                  </Link>
+                  </SpringLink>
                 </Col>
             </Row>
         </Container>

@@ -14,7 +14,7 @@ const HomePageSection = () => {
             <Container fluid="true" className={['flex-grow-1'].join(' ')}>
                 <Row className='h-100 d-flex'>
                     <Col xs={{span:12}} className={['d-flex','align-items-center'].join(' ')}>
-                        <div className={['m-auto','img-fluid','w-100'].join(' ')}>
+                        <div className={['img-fluid','w-100'].join(' ')} style={{marginTop:'-6em'}}>
                             <Image />
                         </div>
                     </Col>

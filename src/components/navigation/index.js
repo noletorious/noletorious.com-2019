@@ -32,11 +32,11 @@ const Navigation = (props) => {
               <Spring
                 from={{
                   paddingTop: props.isHome && mount ? '8vh' :'2vh',
-                  paddingBottom: props.isHome && mount ? '8vh' :'2vh'
+                  paddingBottom: props.isHome && mount ? '15vh' :'2vh'
                 }}
                 to={{
                   paddingTop: props.isHome && mount ? '8vh' : !props.isHome && mount ? '2vh' : '2vh',
-                  paddingBottom: props.isHome && mount ? '8vh' : !props.isHome && mount ? '2vh' : '2vh'
+                  paddingBottom: props.isHome && mount ? '15vh' : !props.isHome && mount ? '2vh' : '2vh'
                 }}
               >
                 {props => 
