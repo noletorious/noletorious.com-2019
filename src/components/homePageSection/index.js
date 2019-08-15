@@ -7,7 +7,6 @@ import {faLongArrowAltDown} from '@fortawesome/free-solid-svg-icons'
 import Image from '../images/chromeMac'
 import Scrollchor from 'react-scrollchor';
 
-
 const HomePageSection = () => {
     return(
         <>

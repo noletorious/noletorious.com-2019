@@ -14,6 +14,10 @@ import Img from "gatsby-image"
  */
 
 const Image = () => {
+  const imgStyle={
+    margin:"0 auto",
+    maxWidth:600
+  }
   const data = useStaticQuery(graphql`
     query {
       placeholderImage: file(relativePath: { eq: "chrome-mac.png" }) {
@@ -28,7 +32,7 @@ const Image = () => {
       }
     }
   `)
-  return <Img fluid={data.placeholderImage.childImageSharp.fluid} style={{margin:"0 auto", maxWidth:600}}/>
+  return <Img fluid={data.placeholderImage.childImageSharp.fluid} className="chromeHome" style={imgStyle}/>
 }
 
 export default Image

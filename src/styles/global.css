@@ -42,3 +42,10 @@ a:hover{
 img{
     margin-bottom:0;
 }
+
+@media screen and (max-height:500px) and (orientation:landscape) {
+    .chromeHome{
+        display:none
+    }
+    
+ }
