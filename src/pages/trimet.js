@@ -11,7 +11,7 @@ import SEO from "../components/seo"
 const Trimet = () => (
   <Layout>
     <SEO title="About Noel" />
-    <Container className='my-5'>
+    <Container className='my-5 text-light'>
         <Row>
           <Col>
             <h1>TriMet</h1>
