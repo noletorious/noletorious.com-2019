@@ -40,7 +40,7 @@ const Navigation = (props) => {
                 }}
               >
                 {props => 
-                    <div id='nav' className="bg-white d-flex d-flex-row flex-wrap align-items-center" style={props}>
+                    <div id='nav' className="bg-white d-flex d-flex-row flex-wrap align-items-center border-bottom" style={props}>
                         <Container>
                           <Row>
                             {/* Back, Home, Name and Title */}
@@ -72,10 +72,10 @@ const Navigation = (props) => {
                               {/* Make the golfer logo way large on the home page.     */}
                               <Spring
                                 from={{
-                                  fontSize: mount && isHomeStatus ? '2.5em' : mount && !isHomeStatus ? '1em' :'1em' 
+                                  fontSize: mount && isHomeStatus ? '2em' : mount && !isHomeStatus ? '1em' :'1em' 
                                 }}
                                 to={{
-                                  fontSize: mount && isHomeStatus ? '2.5em' : mount && !isHomeStatus ? '1em' :'1em'
+                                  fontSize: mount && isHomeStatus ? '2em' : mount && !isHomeStatus ? '1em' :'1em'
                                 }}
                               >
                                 {props =>  
