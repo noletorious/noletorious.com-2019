@@ -23,7 +23,6 @@ const typography = new Typography({
   headerFontFamily: [
     "Goudy Bookletter 1911",
     "Helvetica Neue",
-    "Segoe UI",
     "Helvetica",
     "Arial",
     "sans-serif",

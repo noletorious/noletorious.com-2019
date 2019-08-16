@@ -8,6 +8,8 @@ import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import {faLongArrowAltRight} from '@fortawesome/free-solid-svg-icons'
 import { useStaticQuery, graphql } from "gatsby"
 
+import projectStyles from './projects.module.css'
+
 
 const Projects = () => {
     const data = useStaticQuery(graphql`
@@ -110,65 +112,73 @@ const Projects = () => {
     return(
         <Container className="vh-100" id='work' fluid>
             <Row className="h-50">
-                <Col xs={{span:12}} sm={{span:6}} className={['text-white'].join(' ')} style={trimetBg}>
-                  <SpringLink to="/trimet">
-                    <div className="d-flex flex-row">
-                      <div className="p-2 align-self-center">
-                        TriMet <FontAwesomeIcon icon={faLongArrowAltRight}></FontAwesomeIcon>
+                <Col xs={{span:12}} sm={{span:6}} className={['text-white','pl-0'].join(' ')} style={trimetBg}>
+                  <SpringLink to="/trimet" >
+                    <div className="d-flex flex-column h-100">
+                      <div className={['p-2','d-flex','flex-row', projectStyles.projectTitleLogo].join(' ')}>
+                        <div className="align-self-center">
+                          <span className="h4">TriMet</span> <FontAwesomeIcon icon={faLongArrowAltRight}></FontAwesomeIcon>
+                        </div>
+                        <div className="ml-auto align-self-center">
+                          <Img fluid={data.trimetLogo.childImageSharp.fluid} style={{width:'50px'}}/>
+                        </div>
                       </div>
-                      <div className="p-2 ml-auto">
-                        <Img fluid={data.trimetLogo.childImageSharp.fluid} style={{width:'50px'}}/>
+                      <div className="d-flex">
+                        <p className={['pb-2','pt-1','px-2', projectStyles.perProjectText].join(' ')}>UX Design, Visual Design, Motion Graphics, Video/Content Production, Animation Storytelling, React Front-end Development, Photography</p>
                       </div>
-                    </div>
-                    <div className="px-2 d-flex flex-row align-self-end">
-                      UX Design, Visual Design, Motion Graphics, Video/Content Production, Animation Storytelling, React Front-end Development, Photography
                     </div>
                   </SpringLink>
                 </Col>
-                <Col xs={{span:12}} sm={{span:6}} className={['text-white'].join(' ')} style={attensaBg}>
-                <SpringLink to="/attensa">
-                    <div className="d-flex flex-row">
-                      <div className="p-2 align-self-center">
-                        Attensa <FontAwesomeIcon icon={faLongArrowAltRight}></FontAwesomeIcon>
+                <Col xs={{span:12}} sm={{span:6}} className={['text-white','pl-0'].join(' ')} style={attensaBg}>
+                  <SpringLink to="/attensa" >
+                    <div className="d-flex flex-column h-100">
+                      <div className={['p-2','d-flex','flex-row', projectStyles.projectTitleLogo].join(' ')}>
+                        <div className="align-self-center">
+                          <span className="h4">Attensa</span> <FontAwesomeIcon icon={faLongArrowAltRight}></FontAwesomeIcon>
+                        </div>
+                        <div className="ml-auto align-self-center">
+                          <Img fluid={data.attensaLogo.childImageSharp.fluid} style={{width:'50px'}}/>
+                        </div>
                       </div>
-                      <div className="p-2 ml-auto">
-                        <Img fluid={data.attensaLogo.childImageSharp.fluid} style={{width:'50px'}}/>
+                      <div className="d-flex">
+                        <p className={['pb-2','pt-1','px-2', projectStyles.perProjectText].join(' ')}>UX Design, Visual Design, Content/Strategic Marketing</p>
                       </div>
-                    </div>
-                    <div className="px-2 d-flex flex-row align-self-end">
-                    UX Design, Visual Design, Content/Strategic Marketing
                     </div>
                   </SpringLink>
                 </Col>
             </Row>
             <Row className="h-50">
-                <Col xs={{span:12}} sm={{span:6}} className={[].join('bg-black')} style={ctBg}>
-                <SpringLink to="/trimet">
-                    <div className="d-flex flex-row">
-                      <div className="p-2 align-self-center">
-                        Cascadia Threads <FontAwesomeIcon icon={faLongArrowAltRight}></FontAwesomeIcon>
+                <Col xs={{span:12}} sm={{span:6}} className={['text-white','pl-0'].join(' ')} style={ctBg}>
+                  <SpringLink to="/attensa" >
+                    <div className="d-flex flex-column h-100">
+                      <div className={['p-2','d-flex','flex-row', projectStyles.projectTitleLogo].join(' ')}>
+                        <div className="align-self-center">
+                          <span className="h4">Cascadia Threads</span> <FontAwesomeIcon icon={faLongArrowAltRight}></FontAwesomeIcon>
+                        </div>
+                        <div className="ml-auto align-self-center">
+                          <Img fluid={data.ctLogo.childImageSharp.fluid} style={{width:'50px'}}/>
+                        </div>
                       </div>
-                      <div className="p-2 ml-auto">
-                        <Img fluid={data.ctLogo.childImageSharp.fluid} style={{width:'50px'}}/>
+                      <div className="d-flex">
+                        <p className={['pb-2','pt-1','px-2', projectStyles.perProjectText].join(' ')}>Design Lead</p>
                       </div>
-                    </div>
-                    <div className="px-2 d-flex flex-row align-self-end">
-                    Design Lead
                     </div>
                   </SpringLink>
                 </Col>
-                <Col xs={{span:12}} sm={{span:6}} className={[].join(' ')} style={hopBg}>
-                <SpringLink to="/trimet">
-                    <div className="d-flex flex-row">
-                      <div className="p-2 align-self-center">
-                        Hop Fastpass <FontAwesomeIcon icon={faLongArrowAltRight}></FontAwesomeIcon>
+                <Col xs={{span:12}} sm={{span:6}} className={['text-white','pl-0'].join(' ')} style={hopBg}>
+                  <SpringLink to="/hop" >
+                    <div className="d-flex flex-column h-100">
+                      <div className={['p-2','d-flex','flex-row', projectStyles.projectTitleLogo].join(' ')}>
+                        <div className="align-self-center">
+                          <span className="h4">Hop Fastpass</span> <FontAwesomeIcon icon={faLongArrowAltRight}></FontAwesomeIcon>
+                        </div>
+                        <div className="ml-auto align-self-center">
+                          <Img fluid={data.hopLogo.childImageSharp.fluid} style={{width:'50px'}}/>
+                        </div>
                       </div>
-                      <div className="p-2 ml-auto">
-                        <Img fluid={data.hopLogo.childImageSharp.fluid} style={{width:'50px'}}/>
+                      <div className="d-flex">
+                        <p className={['pb-2','pt-1','px-2', projectStyles.perProjectText].join(' ')}>Hand modeling, video production, motion graphics, 2D animation, UI Design</p>
                       </div>
-                    </div>
-                    <div className="px-2 d-flex flex-row align-self-end">
-                    Hand modeling, video production, motion graphics, 2D animation, UI Design
                     </div>
                   </SpringLink>
                 </Col>
