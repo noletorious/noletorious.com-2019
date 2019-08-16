@@ -120,6 +120,9 @@ const Projects = () => {
                         <Img fluid={data.trimetLogo.childImageSharp.fluid} style={{width:'50px'}}/>
                       </div>
                     </div>
+                    <div className="px-2 d-flex flex-row align-self-end">
+                      UX Design, Visual Design, Motion Graphics, Video/Content Production, Animation Storytelling, React Front-end Development, Photography
+                    </div>
                   </SpringLink>
                 </Col>
                 <Col xs={{span:12}} sm={{span:6}} className={['text-white'].join(' ')} style={attensaBg}>
@@ -131,6 +134,9 @@ const Projects = () => {
                       <div className="p-2 ml-auto">
                         <Img fluid={data.attensaLogo.childImageSharp.fluid} style={{width:'50px'}}/>
                       </div>
+                    </div>
+                    <div className="px-2 d-flex flex-row align-self-end">
+                    UX Design, Visual Design, Content/Strategic Marketing
                     </div>
                   </SpringLink>
                 </Col>
@@ -146,6 +152,9 @@ const Projects = () => {
                         <Img fluid={data.ctLogo.childImageSharp.fluid} style={{width:'50px'}}/>
                       </div>
                     </div>
+                    <div className="px-2 d-flex flex-row align-self-end">
+                    Design Lead
+                    </div>
                   </SpringLink>
                 </Col>
                 <Col xs={{span:12}} sm={{span:6}} className={[].join(' ')} style={hopBg}>
@@ -157,6 +166,9 @@ const Projects = () => {
                       <div className="p-2 ml-auto">
                         <Img fluid={data.hopLogo.childImageSharp.fluid} style={{width:'50px'}}/>
                       </div>
+                    </div>
+                    <div className="px-2 d-flex flex-row align-self-end">
+                    Hand modeling, video production, motion graphics, 2D animation, UI Design
                     </div>
                   </SpringLink>
                 </Col>
