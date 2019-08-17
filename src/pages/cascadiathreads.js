@@ -12,7 +12,7 @@ import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import {faArrowDown, faExternalLinkAlt} from '@fortawesome/free-solid-svg-icons'
 import Scrollchor from 'react-scrollchor';
 
-const Trimet = () => {
+const cascadiaThreads = () => {
   const data = useStaticQuery(graphql`
   query {
     tilikumImage: file(relativePath: { eq: "tilikum.jpg" }) {
@@ -53,9 +53,9 @@ return (
             <h5>Portland, Oregon</h5>
             &nbsp;
             <h5>Role:</h5>
-            <p>Web Designer/Developer <span className="text-muted small">(Current)</span></p>
+            <p>Web Designer/Developer <span className="text-muted">(Current)</span></p>
             &nbsp;
-            <h5>Day to day responsibilities:</h5>
+            <h5>Day to day</h5>
             <p>UX Design, Visual Design, Motion Graphics, Video/Content Production, Animation Storytelling, React Front-end Development, Photography</p>
             &nbsp;
           </Col>
@@ -113,4 +113,4 @@ return (
   )
 }
 
-export default Trimet
+export default cascadiaThreads

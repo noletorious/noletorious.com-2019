@@ -149,7 +149,7 @@ const Projects = () => {
             </Row>
             <Row className="h-50">
                 <Col xs={{span:12}} sm={{span:6}} className={['text-white','pb-3'].join(' ')}>
-                  <SpringLink to="/attensa" >
+                  <SpringLink to="/cascadiathreads" >
                     <div className="d-flex flex-column h-100" style={ctBg}>
                       <div className={['p-2','d-flex','flex-row','mb-auto', projectStyles.projectTitleLogo].join(' ')}>
                         <div className="align-self-center">
