@@ -87,7 +87,7 @@ const Navigation = (props) => {
                                   </div>
                                   <div className="p-2" style={props}>
                                     <p className='mb-0 text-light font-weight-bold'>Noel Torres</p>
-                                    <h6 className='mb-0 text-light'>Front-end Designer</h6>
+                                    <h6 className='mb-0 text-light'>Full-stack Designer</h6>
                                   </div>
                                   </>
                               }
