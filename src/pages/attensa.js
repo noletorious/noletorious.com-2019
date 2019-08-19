@@ -256,7 +256,7 @@ return (
       <Row>
           <Col sm={{span:12}} md={{span:12}}>
             &nbsp;
-            <img src={attensaLogoAnimation} className="mx-auto d-block" style={{maxWidth:'600px'}} alt="Attensa Motion" />
+            <img src={attensaLogoAnimation} className="mx-auto img-fluid d-block" alt="Attensa Motion" />
           </Col>
         </Row>
     </Container>

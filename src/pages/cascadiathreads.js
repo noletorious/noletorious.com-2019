@@ -6,7 +6,7 @@ import { useStaticQuery, graphql } from "gatsby"
 import Layout from "../layouts/page"
 import SEO from "../components/seo"
 import Img from 'gatsby-image'
-
+import ctAnimation from '../images/ct-animation.gif'
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import {faExternalLinkAlt} from '@fortawesome/free-solid-svg-icons'
 
@@ -61,17 +61,44 @@ return (
           <Col sm={{span:12}} md={{span:8, offset:2}}>
           &nbsp;
           <h3>Sharp edge design, soft material</h3>
+          <p>I’ve had the pleasure to work on such a trendy project. </p>
           &nbsp;
           <h4>Problem:</h4>
           <p>The startup e-commerce company needed a jump start on their web presence.</p>
           &nbsp;
-
+          <h4>Strategy</h4>
+          <ul>
+            <li>Build content and products for the audience we know, young adults, 20-40 year olds, that like wearing minimal, stark colors.</li>
+            <li>Cater to those near us, other Pacific Northwesterns.</li>
+            <li>Differentiate ourselves and create our own niche by appealing to the tech industry.</li>
+          </ul>
           &nbsp;
-          <div className="py-3"></div>
+          <h4>Design</h4>
+          <p>Being the only web designer and developer on the team, I lead the creative direction. </p>
           &nbsp;
-          <h3 id="otp">Design</h3>
-          <p>The webstore .</p>
-          <a href="http://modbeta.trimet.org/">Enjoy beta <FontAwesomeIcon icon={faExternalLinkAlt}></FontAwesomeIcon></a>
+          <p>[Image of low fidelity of homepage to product page]</p>
+          &nbsp;
+          <p>Then moved to higher fidelity after a few discussions and iterations.</p>
+          &nbsp;
+          <p>[Image of high fidelity of homepage to product page]</p>
+          &nbsp;
+          </Col>
+        </Row>
+    </Container>
+    <Container fluid style={{background:"#323232",paddingTop:'100px',paddingBottom:'100px'}}>
+      <Row>
+          <Col sm={{span:12}} md={{span:12}}>
+            &nbsp;
+            {/* <img src={attensaLogoAnimation} className="mx-auto d-block" style={{maxWidth:'600px'}} alt="Attensa Motion" /> */}
+            <p className="text-center text-light">[Instert ct bumper gif]</p>
+          </Col>
+        </Row>
+    </Container>
+    <Container fluid style={{background:"#000",paddingTop:'100px',paddingBottom:'100px'}}>
+      <Row>
+          <Col xs={{span:12}} sm={{span:8, offest:2}} md={{span:6, offset:3}}>
+            &nbsp;
+            <img src={ctAnimation} className="mx-auto d-block"  alt="Cascadia Threads Motion" />
           </Col>
         </Row>
     </Container>

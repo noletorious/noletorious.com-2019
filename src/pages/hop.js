@@ -15,7 +15,7 @@ import Scrollchor from 'react-scrollchor';
 const Hop = () => {
   const data = useStaticQuery(graphql`
   query {
-    tilikumImage: file(relativePath: { eq: "tilikum.jpg" }) {
+    hopImage: file(relativePath: { eq: "hop-fastpass-circle.png" }) {
       childImageSharp {
         fluid(
           quality: 100
@@ -24,7 +24,7 @@ const Hop = () => {
         }
       }
   }
-  trimetWhiteImage: file(relativePath: { eq: "trimet-white.png" }) {
+  hopTapImage: file(relativePath: { eq: "hop-tap.jpg" }) {
     childImageSharp {
       fluid(
         quality: 100
@@ -32,15 +32,57 @@ const Hop = () => {
         ...GatsbyImageSharpFluid
       }
     }
-}
+  }
+  hopVCTapImage: file(relativePath: { eq: "hop-vc-tap.jpg" }) {
+    childImageSharp {
+      fluid(
+        quality: 100
+      ) {
+        ...GatsbyImageSharpFluid
+      }
+    }
+  }
+  hopsterVCImage: file(relativePath: { eq: "hop-vc.jpg" }) {
+    childImageSharp {
+      fluid(
+        quality: 100
+      ) {
+        ...GatsbyImageSharpFluid
+      }
+    }
+  }
 }
 `)
 const projects = [
   {
     year:'2019',
-    name: 'Open Trip Planner',
-    status: 'WIP',
-    anchorLink: 'otp'
+    name: 'Apple virtual card launch',
+    status: 'Campaign',
+    anchorLink: 'virtualCard'
+  },
+  {
+    year:'2018',
+    name: 'Virtual Card Hopster Animation',
+    status: 'Video',
+    anchorLink: 'hopsterVCAnimation'
+  },
+  {
+    year:'2017',
+    name: 'Hopster Launch Commercials',
+    status: 'Video',
+    anchorLink: 'hopLaunchAnimation'
+  },
+  {
+    year:'2017',
+    name: 'How to tap',
+    status: 'Video',
+    anchorLink: 'howToTap'
+  },
+  {
+    year:'2017',
+    name: 'Website Launch',
+    status: 'Website',
+    anchorLink: 'website'
   }
 ]
 return (
@@ -49,38 +91,36 @@ return (
     <Container className='my-5 text-light'>
         <Row>
           <Col sm={{span:12}} md={{span:8, offset:2}}>
-            <Img fluid={data.trimetWhiteImage.childImageSharp.fluid} style={{maxWidth:'200px', marginLeft:'-.5em'}}/>
-            <h5>Portland, Oregon</h5>
+            <Img fluid={data.hopImage.childImageSharp.fluid} style={{maxWidth:'100px'}}/>
+            <h5 className="mt-2">Portland, Oregon</h5>
             &nbsp;
             <h5>Role:</h5>
             <p>Web Designer/Developer <span className="text-muted">(Current)</span></p>
             &nbsp;
             <h5>Day to day</h5>
-            <p>UX Design, Visual Design, Motion Graphics, Video/Content Production, Animation Storytelling, React Front-end Development, Photography</p>
+            <p>Hand modeling, video production, motion graphics, 2D animation, UI Design</p>
             &nbsp;
           </Col>
         </Row>
         {/* Image */}
         <Row>
           <Col sm={{span:12}} md={{span:12}}>
-            <Img fluid={data.tilikumImage.childImageSharp.fluid} fadeIn={true}/>
+            <Img fluid={data.hopTapImage.childImageSharp.fluid} fadeIn={true}/>
           </Col>
         </Row>
         <Row>
           <Col sm={{span:12}} md={{span:8, offset:2}}>
           &nbsp;
-          <h3>RiderComm</h3>
+          <h3 className="mt-3">Remeber to tap ever time</h3>
           &nbsp;
-          <p>I work in a team that speaks directly to our customers which are public transit riders. However, riders can range from frequent riders to even non-riders. Understanding how we communicate to each type is vital to the role. At TriMet, we take the time to listen and understand customer feedback by conducting surveys, asking Twitter polls, and sending nice emails directly to them. Through this process we build rider personas that we try to speak to through our messaging and design. </p>
-          <p>On a day to day basis my work can range from developing a MAX arrival screens for the Portland International Airport, to taking photos for our instagram on my way to work, to animating traffic patterns when there are road improvements, to designing logos. Work seems endless but very fun.</p>
-          <p>Here are some projects I’m able to share:</p>
+          <p>My first year working with TriMet, we launched our separate fare system Hop Fastpass. During this project I worked heavily on animating the hop mascot which we call hopsters, along with providing design references for developers to implement.</p>
           &nbsp;
           <Table striped bordered hover variant="dark">
             <thead>
               <tr>
                 <th>Year</th>
                 <th>Project</th>
-                <th>Status</th>
+                <th>Type</th>
                 <th></th>
               </tr>
             </thead>
@@ -101,11 +141,114 @@ return (
             </tbody>
           </Table>
           &nbsp;
-          <div className="py-3"></div>
-          &nbsp;
-          <h3 id="otp">Open Trip Planner</h3>
-          <p>This project is still on going so I’m limited to what I can share. This project deserves its own page.</p>
-          <a href="http://modbeta.trimet.org/">Enjoy beta <FontAwesomeIcon icon={faExternalLinkAlt}></FontAwesomeIcon></a>
+          </Col>
+        </Row>
+        {/* Apple Virtual Card */}
+        <Row className="my-5" id="virtualCard">
+          <Col sm={{span:12}} md={{span:8, offset:2}}>
+              <h4>Apple Virtual Card Launch</h4>
+              <p className="text-muted small">July 2019</p>
+              &nbsp;
+              <Img fluid={data.hopVCTapImage.childImageSharp.fluid} fadeIn={true}/>
+              &nbsp;
+              <p>Worked directly with Apple’s marketing team on producing videos that demonstrated how to install and use Hop’s virtual hop card on iOS. My main roles on this project was that I be the hand model talent for print and video content and collaborated with our videographer to produce how-to videos.</p>
+              <a className="d-block" href="https://www.youtube.com/watch?v=44fJcKEdTQs&list=PLtJW_Q-z9fw9uq4MPaXuk8S8opJ3IeXTA">What the how-to videos (00:09 Me!) <FontAwesomeIcon icon={faExternalLinkAlt}></FontAwesomeIcon></a>
+              &nbsp;
+              <a href="https://trimet.org/applepay/">Learn more about it <FontAwesomeIcon icon={faExternalLinkAlt}></FontAwesomeIcon></a>
+          </Col>
+        </Row>
+        {/* Divider */}
+        <Row className="my-5">
+          <Col>
+              <div className="border border-secondary border-bottom-0 border-right-0 border-left-0"></div>
+          </Col>
+        </Row>
+        {/* Virtual Hopster Card Animation */}
+        <Row className="my-5" id="hopsterVCAnimation">
+          <Col sm={{span:12}} md={{span:8, offset:2}}>
+              <h4>Virtual Hopster Card Animation</h4>
+              <p className="text-muted small">July 2018</p>
+              &nbsp;
+              {/* <Img fluid={data.hopsterVCImage.childImageSharp.fluid} fadeIn={true}/> */}
+              &nbsp;
+              <p>[Insert hospter vc animation]</p>
+              &nbsp;
+              <p>For this project, I was tasked to create something never done in the space of Google Pay. Working with developers, I provided them an animation to include on the virtual card when the card is selected. It turned out to be subtle, cute, and retrospectively we realized the motion was a great way to indicate a valid fare</p>
+              <a className="d-block" href="https://play.google.com/store/apps/details?id=org.trimet.mt.accounts">Download Hop for Android<FontAwesomeIcon icon={faExternalLinkAlt}></FontAwesomeIcon></a>
+          </Col>
+        </Row>
+        {/* Divider */}
+        <Row className="my-5">
+          <Col>
+              <div className="border border-secondary border-bottom-0 border-right-0 border-left-0"></div>
+          </Col>
+        </Row>
+        {/* Virtual Hopster Card Animation */}
+        <Row className="my-5" id="hopLaunchAnimation">
+          <Col sm={{span:12}} md={{span:8, offset:2}}>
+              <h4>Hopster Launch Commercials</h4>
+              <p className="text-muted small">July 2017</p>
+              &nbsp;
+              {/* <Img fluid={data.hopsterVCImage.childImageSharp.fluid} fadeIn={true}/> */}
+              &nbsp;
+              <p>[Insert hopster in browser]</p>
+              &nbsp;
+              <p>During the launch I created two commercials. One six second ad that played on Youtube videos and a 30 second ad that was aired on television at the time.</p>
+              &nbsp;
+              <h4>Design:</h4>
+              <p>Create a message that helps demonstrate what this new Hop Fastpass is and what it can do.</p>
+              <a className="d-block" href="https://youtu.be/rEfZ9AhD1yw?list=PLtJW_Q-z9fw84dtHW2sraG_q_MzS_b-A8">View the video playlist <FontAwesomeIcon icon={faExternalLinkAlt}></FontAwesomeIcon></a>
+          </Col>
+        </Row>
+        {/* Divider */}
+        <Row className="my-5">
+          <Col>
+              <div className="border border-secondary border-bottom-0 border-right-0 border-left-0"></div>
+          </Col>
+        </Row>
+        {/* Virtual Hopster Card Animation */}
+        <Row className="my-5" id="howToTap">
+          <Col sm={{span:12}} md={{span:8, offset:2}}>
+              <h4>How to tap</h4>
+              <p className="text-muted small">July 2017</p>
+              &nbsp;
+              {/* <Img fluid={data.hopsterVCImage.childImageSharp.fluid} fadeIn={true}/> */}
+              &nbsp;
+              <p>[Insert how to tap video in browser]</p>
+              &nbsp;
+              <p>The Hop Fastpass at the time was a new fare system people would have to learn and hopefully adopt as a habit to use when paying for your fare. Creating videos that helped descibe that to users was essential. Not only to remind people to tap everytime they ride, but to educate people that this is a more cost-efficient way to take public transit.</p>
+              &nbsp;
+              <a className="d-block" href="https://youtu.be/rEfZ9AhD1yw?list=PLtJW_Q-z9fw84dtHW2sraG_q_MzS_b-A8">View the how-to play list <FontAwesomeIcon icon={faExternalLinkAlt}></FontAwesomeIcon></a>
+          </Col>
+        </Row>
+        {/* Divider */}
+        <Row className="my-5">
+          <Col>
+              <div className="border border-secondary border-bottom-0 border-right-0 border-left-0"></div>
+          </Col>
+        </Row>
+        {/* Website Launch */}
+        <Row className="my-5" id="howToTap">
+          <Col sm={{span:12}} md={{span:8, offset:2}}>
+              <h4>Website Launch</h4>
+              <p className="text-muted small">August 2017</p>
+              &nbsp;
+              {/* <Img fluid={data.hopsterVCImage.childImageSharp.fluid} fadeIn={true}/> */}
+              &nbsp;
+              <p>[Insert hop webiste video in browser]</p>
+              &nbsp;
+              <p>Although I did not design the website, I helped with providing motion to graphics on the site as well as design references for developers during our change orders to the website.</p>
+              &nbsp;
+              <a className="d-block" href="https://myhopcard.com">Go to myhopcard.com <FontAwesomeIcon icon={faExternalLinkAlt}></FontAwesomeIcon></a>
+          </Col>
+        </Row>
+    </Container>
+    <Container fluid style={{background:"#323232",paddingTop:'300px',paddingBottom:'300px'}}>
+      <Row>
+          <Col xs={{span:12}} sm={{span:8,offset:2}} md={{span:6, offset:3}}>
+            &nbsp;
+            {/* <img src={attensaLogoAnimation} className="mx-auto d-block" style={{maxWidth:'600px'}} alt="Attensa Motion" /> */}
+            <p className="text-center text-light">[Instert hop bumper gif]</p>
           </Col>
         </Row>
     </Container>
