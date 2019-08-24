@@ -51,12 +51,27 @@ const Hop = () => {
       }
     }
   }
+  hopWhatsmyfareImage: file(relativePath: { eq: "hop-whatsmyfare.jpg" }) {
+    childImageSharp {
+      fluid(
+        quality: 100
+      ) {
+        ...GatsbyImageSharpFluid
+      }
+    }
+  }
 }
 `)
 const projects = [
   {
     year:'2019',
-    name: 'Apple virtual card launch',
+    name: 'Whats Your Fare Questionnaire',
+    status: 'Website',
+    anchorLink: 'whatsyourfare'
+  },
+  {
+    year:'2019',
+    name: 'Apple Virtual Card Launch',
     status: 'Campaign',
     anchorLink: 'virtualCard'
   },
@@ -108,13 +123,13 @@ return (
             <Img fluid={data.hopTapImage.childImageSharp.fluid} fadeIn={true}/>
           </Col>
         </Row>
+        {/* Introduction */}
         <Row>
           <Col sm={{span:12}} md={{span:8, offset:2}}>
           &nbsp;
-          <h3 className="mt-3">Remeber to tap ever time</h3>
+          <h2 className="mt-5">Remeber to tap ever time</h2>
           &nbsp;
-          <p>My first year working with TriMet, we launched our separate fare system Hop Fastpass. During this project I worked heavily on animating the hop mascot which we call hopsters, along with providing design references for developers to implement.</p>
-          &nbsp;
+          <p className="mb-5">My first year working with TriMet, we launched our separate fare system Hop Fastpass. During this project I worked heavily on animating the <em>hopster</em> trio, building micro-websites for marketing campaigns, along with providing design references for developers to implement.</p>
           <Table striped bordered hover variant="dark">
             <thead>
               <tr>
@@ -141,6 +156,40 @@ return (
             </tbody>
           </Table>
           &nbsp;
+          </Col>
+        </Row>
+        {/* whatsyourfare */}
+        <Row className="my-5" id="virtualCard">
+          <Col sm={{span:12}} md={{span:8, offset:2}}>
+              <h4>Whats your fare questionnare</h4>
+              <p className="text-muted small">August 2019</p>
+              &nbsp;
+              {/* <Img fluid={data.hopVCTapImage.childImageSharp.fluid} fadeIn={true}/> */}
+              <p>[insert gif of second to the last screen, animating to the a you-got-phone option - in browser]</p>
+              &nbsp;
+              <p>With the all the different payment options riders have, which one fits them the best? We came up with a questionare workflow that helps every kind of rider.</p>
+          </Col>
+        </Row>
+        {/* Whatsmyfare Image */}
+        <Row>
+          <Col sm={{span:12}} md={{span:12}}>
+            <h4 className="mb-5">The Workflow</h4>
+            <Img className="my-5" fluid={data.hopWhatsmyfareImage.childImageSharp.fluid} fadeIn={true}/>
+          </Col>
+        </Row>
+        {/* whatsmyfare continued */}
+        <Row>
+          <Col sm={{span:12}} md={{span:8, offset:2}}>
+              &nbsp;
+              <p>Collaborating with our senior web designer and our content strategist, we found a relatively short path to figuring out what kind of payment option fits any kind of rider. My main responsibility was to build the experience, I used a Gastbyjs which is a wonderful framework built with Reactjs that is perfect for this project.</p>
+              &nbsp;
+              <a href="https://trimet.org/whatsmyfare/">Figure out your fare <FontAwesomeIcon icon={faExternalLinkAlt}></FontAwesomeIcon></a>
+          </Col>
+        </Row>
+        {/* Divider */}
+        <Row className="my-5">
+          <Col>
+              <div className="border border-secondary border-bottom-0 border-right-0 border-left-0"></div>
           </Col>
         </Row>
         {/* Apple Virtual Card */}
@@ -183,7 +232,7 @@ return (
               <div className="border border-secondary border-bottom-0 border-right-0 border-left-0"></div>
           </Col>
         </Row>
-        {/* Virtual Hopster Card Animation */}
+        {/* Hopster Launch Commercials */}
         <Row className="my-5" id="hopLaunchAnimation">
           <Col sm={{span:12}} md={{span:8, offset:2}}>
               <h4>Hopster Launch Commercials</h4>

@@ -115,12 +115,13 @@ return (
             <Img fluid={data.tilikumImage.childImageSharp.fluid} fadeIn={true}/>
           </Col>
         </Row>
+        {/* Introduction */}
         <Row className='my-5'>
           <Col sm={{span:12}} md={{span:8, offset:2}}>
           &nbsp;
           <h3>RiderComm</h3>
           &nbsp;
-          <p>I work in a team that speaks directly to our customers which are public transit riders. However, riders can range from frequent riders to even non-riders. Understanding how we communicate to each type is vital to the role. At TriMet, we take the time to listen and understand customer feedback by conducting surveys, asking Twitter polls, and sending nice emails directly to them. Through this process we build rider personas that we try to speak to through our messaging and design. </p>
+          <p>I work in a team that speaks directly to our customers which are public transit riders. However, riders can range from frequent riders to even non-riders. Understanding how we communicate to each type is vital to the role. At TriMet, we take the time to listen and understand customer feedback by regularly conducting surveys, asking Twitter polls, and sending nice emails directly to them. Through this process we build rider personas that we try to speak to through our messaging and design. </p>
           <p>On a day to day basis my work can range from developing MAX arrival screens for the Portland International Airport, to taking photos for our instagram on my way to work, to animating traffic patterns when there are road changes or improvements, to designing logos. My work environment allows me to pursue projects I'm interested in.</p>
           <p>Here are some projects I’m able to share:</p>
           &nbsp;
@@ -157,7 +158,9 @@ return (
           <Col sm={{span:12}} md={{span:8, offset:2}}>
           <h3 id="otp">Open Trip Planner</h3>
           <Img fluid={data.otpPreviewImage.childImageSharp.fluid} fadeIn={true} />
-          <p>This project is still on going so I’m limited to what I can share. This project deserves its own page.</p>
+          <p className='mb-3'>This project is still on going so I’m very limited to what I can share. My role in this position was UX Designer and an member of a internal committee. For serious job inquiries, please <a href ="mailto:noel@noletorious.com">email me directly</a>.
+          </p>
+          &nbsp;
           <a href="https://trimet.org/newplanner/">Enjoy beta <FontAwesomeIcon icon={faExternalLinkAlt}></FontAwesomeIcon></a>
           </Col>
         </Row>
@@ -170,15 +173,19 @@ return (
         {/* Onsite Transit Tracker */}
         <Row className='my-5'>
           <Col sm={{span:12}} md={{span:8, offset:2}}>
+          <h1><em>consider other projects</em></h1>
           <h3 id="onsite">New Onsite Transit Tracker</h3>
           <p>[Insert Image of solari screen]</p>
           <p>Improving the UI to arrival information for riders is just straight up fun. It is great to be involved in a design that has such high visibility within the town I live in.</p>
           &nbsp;
           <h4>Problem:</h4>
           <p>With the consideration of upgrading our display screens out in the public, we needed a refresh to the new design. With new infrastructure came new capabilities.</p>
+          &nbsp;
           <p>[insert image of current tracker - use onsite example]</p>
+          &nbsp;
           <h5>Research:</h5>
           <p>Questions we asked our riders:</p>
+          &nbsp;
           <Row>
             <Col xs={{span:12}} sm={{span:6}}>
               <div className="p-3 my-3 rounded bg-dark border">
@@ -195,6 +202,7 @@ return (
               </div>
             </Col>
           </Row>
+          &nbsp;
           <h4>Design:</h4>
           <p>With the knowledge we gained by simply asking riders, jump started the design. The two big improvements I wanted to solve was:</p>
           <ul>
@@ -202,12 +210,15 @@ return (
             <li>Context, at a glance users should understand where they are and where their next vehicle is.</li>
             <li>Design, create something elegant.</li>
           </ul>
-          <p>[insert image of new tracker</p>
+          &nbsp;
+          <p>[insert image of new tracker]</p>
+            &nbsp;
           <p>Hopefully the new design speaks for itself. But to summarize, in order to design reach new design requirements:</p>
-          <ul>
+          <ul className='mb-4'>
             <li>I continued down the dark scheme path because of how it does perform better with outside displays.</li>
             <li>I've included a <em>you are here</em> marker on a map to give users a sense of where they are and where their vehicle is if in the bounded area.</li>
           </ul>
+          &nbsp;
           <a href="#">Enjoy the XD prototype <FontAwesomeIcon icon={faExternalLinkAlt}></FontAwesomeIcon></a>
           </Col>
         </Row>
@@ -224,7 +235,7 @@ return (
 
           <p>[Insert gif of after effects replaying going over keyframes]</p>  
 
-          <p>My manager walks up to me one day and said,“I think it would be cool to have a visual for new service lines. Like a top down fly through.” Immediately I thought of the Google Earth fly through tour feature.</p>
+          <p>One day, my manager walks up to me one day and said, “I think it would be cool to have a visual for new service lines. Like a top down fly through.” Immediately I thought of the Google Earth fly through tour feature.</p>
           &nbsp;
           <h4>Problem:</h4>
           <p>We needed a visually engaging way to show people about new service and how it connects people within the neighborhood to points of interest along the route. </p>

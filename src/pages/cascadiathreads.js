@@ -60,13 +60,18 @@ return (
         <Row>
           <Col sm={{span:12}} md={{span:8, offset:2}}>
           &nbsp;
-          <h3>Sharp edge design, soft material</h3>
-          <p>I’ve had the pleasure to work on such a trendy project. </p>
+          <h3 className="mt-3">Sharp edge design, soft material</h3>
+          &nbsp;
+          <p>In 2015, I had the pleasure to work on trendy Pacific Northwest project. It was a priviledge because retrospectively, I realized a lot of what I contributed was my creative expression and not following an already set format of designing a brand. As you can imagine, in a small team of three you need to take on many roles and responsibitlities; and as the Design Lead I was involved with apparel design/production, content marketing, photography and developing the online store. </p>
+          &nbsp;
+          <p>Unfortunately, the company was unsustainable due to the fact that everyone involved in the project could not commit to the time to developing the brand. We all understood that it is the nature of life and setting priorities.</p>
           &nbsp;
           <h4>Problem:</h4>
+          &nbsp;
           <p>The startup e-commerce company needed a jump start on their web presence.</p>
           &nbsp;
           <h4>Strategy</h4>
+          &nbsp;
           <ul>
             <li>Build content and products for the audience we know, young adults, 20-40 year olds, that like wearing minimal, stark colors.</li>
             <li>Cater to those near us, other Pacific Northwesterns.</li>
@@ -74,13 +79,30 @@ return (
           </ul>
           &nbsp;
           <h4>Design</h4>
-          <p>Being the only web designer and developer on the team, I lead the creative direction. </p>
           &nbsp;
-          <p>[Image of low fidelity of homepage to product page]</p>
+          <p><em>Dark and stark.</em> That was our three word description of how to approach any design. The point was to treat the design with a focus, a theme you could say, to help with design direction or concepts of other future designs.</p>
           &nbsp;
-          <p>Then moved to higher fidelity after a few discussions and iterations.</p>
+          <h5>Apparel and Collaborations</h5>
           &nbsp;
-          <p>[Image of high fidelity of homepage to product page]</p>
+          <p>[insert image of WeWork photoshoot</p>
+          &nbsp;
+          <p>Worked with a local and in my opinion the best photographer and screen printing company in Portland. Oregon Screen Impressions, in 2015 we had them print our designs on organic cottom, all made in the USA. </p>
+          &nbsp;
+          <p>In 2016, we did a photoshot at the WeWork Custom house with Blackprints. I was a honor to work with the talented Nesrin at such a photogenic location. My role was to hire our models and make sure the photoshoot went accoringly.</p>
+          &nbsp;
+          <h5>Web &amp; and Digital</h5>
+          &nbsp;
+          <p>The website was built with Wordpress and the backend store Woocommerce. The best rule when designing a store is to keep the clear what we are selling, so the design needed to accomplish that. We used white space generously, used accents and muted colors on text to avoid having everything bold, and made sure the mobile experience was comparable.</p>
+          &nbsp;
+          <p>Designing the user flows of the website, here are a few examples of a few critical pages and what it would be like if users were working through them: From the front page, to a single product page, to a checkout rundown page.</p>
+          &nbsp;
+          <p>[insert low fidelity flow of pages described above]</p>
+          &nbsp;
+          <h5>The Future</h5>
+          &nbsp;
+          <p>As low fidelity designs got the thumbs up from others on the team, we started to develop but brought the site down late 2018. As a last thought, I really do hope we back the brand, I honestly think it has the potential to be picked up by a niche community in Portland. Enjoy a mockup of the single product page:</p>
+          &nbsp;
+          <p>[Insert high fidelity of product page in a browser ]</p>
           &nbsp;
           </Col>
         </Row>
@@ -90,7 +112,7 @@ return (
           <Col sm={{span:12}} md={{span:12}}>
             &nbsp;
             {/* <img src={attensaLogoAnimation} className="mx-auto d-block" style={{maxWidth:'600px'}} alt="Attensa Motion" /> */}
-            <p className="text-center text-light">[Instert ct bumper gif]</p>
+            <p className="text-center text-light">[Insert we work photography shoot]</p>
           </Col>
         </Row>
     </Container>

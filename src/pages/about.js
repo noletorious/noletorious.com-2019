@@ -60,14 +60,19 @@ const About = () => {
         <Row>
           <Col xs={{span:12}} sm={{span:8, offset:2}}>
             <div className="px-3">
-            <h5><span role="img" aria-label="artist">🎨 </span> My creative type:</h5>
-              <p><a target="_blank" href="https://mycreativetype.com/type/producer/" rel="noopener noreferrer">Producer</a></p>&nbsp;
+              
               <h5><span role="img" aria-label="golfer">🏌️</span> When I'm not designing:</h5>
-              <p>Probably golfing! Cold brews and beyond burgers.</p>&nbsp;
+              <p>Probably golfing! Cold brews and beyond burgers.</p>
+              &nbsp;
               <h5><span role="img" aria-label="designers">👍 </span>Design philosophy:</h5>
-              <p>It is always in flux. Currently, I've taken to heart a recommendation by my manager to read Steve Krug’s <em>Don’t Make Me Think</em>.</p>&nbsp;
+              <p>It is always in flux. Currently, I've taken to heart a recommendation by my manager to read Steve Krug’s <em>Don’t Make Me Think</em>.</p>
+              &nbsp;
+              <h5><span role="img" aria-label="artist">🎨 </span> My creative type:</h5>
+              <p><a target="_blank" href="https://mycreativetype.com/type/producer/" rel="noopener noreferrer">Producer</a></p>
+              &nbsp;
               <h5><span role="img" aria-label="music">🎵</span> Current jam:</h5>
-              <p>Awake by Tycho</p>&nbsp;
+              <p>Awake by Tycho</p>
+              &nbsp;
             </div>
           </Col>
         </Row>
