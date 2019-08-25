@@ -7,7 +7,8 @@ import { useStaticQuery, graphql } from "gatsby"
 import Layout from "../layouts/page"
 import SEO from "../components/seo"
 import Img from 'gatsby-image'
-
+import trimetLogo from '../images/trimet-logo.gif'
+import trimetFly from "../images/trimet-googlefly.gif"
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import {faArrowDown, faExternalLinkAlt} from '@fortawesome/free-solid-svg-icons'
 import Scrollchor from 'react-scrollchor';
@@ -42,6 +43,87 @@ const Trimet = () => {
       }
     }
   }
+  trimetShelterImage: file(relativePath: { eq: "trimet-transittrackershelter.jpg" }) {
+    childImageSharp {
+      fluid(
+        quality: 100
+      ) {
+        ...GatsbyImageSharpFluid
+      }
+    }
+  }
+  oldTTImage: file(relativePath: { eq: "trimet-old-tt.png" }) {
+    childImageSharp {
+      fluid(
+        quality: 100
+      ) {
+        ...GatsbyImageSharpFluid_noBase64
+      }
+    }
+  }
+  newTTImage: file(relativePath: { eq: "trimet-new-tt.png" }) {
+    childImageSharp {
+      fluid(
+        quality: 100
+      ) {
+        ...GatsbyImageSharpFluid_noBase64
+      }
+    }
+  }
+  lowIncPortalImage: file(relativePath: { eq: "trimet-lowincportal.png" }) {
+    childImageSharp {
+      fluid(
+        quality: 100
+      ) {
+        ...GatsbyImageSharpFluid_noBase64
+      }
+    }
+  }
+  pdxMapImage: file(relativePath: { eq: "trimet-pdx.jpg" }) {
+    childImageSharp {
+      fluid(
+        quality: 100
+      ) {
+        ...GatsbyImageSharpFluid_noBase64
+      }
+    }
+  }
+  pdxScreensImage: file(relativePath: { eq: "trimet-pdxscreens.png" }) {
+    childImageSharp {
+      fluid(
+        quality: 100
+      ) {
+        ...GatsbyImageSharpFluid_noBase64
+      }
+    }
+  }
+  pdxRealScreenImage: file(relativePath: { eq: "trimet-pdxresult.jpg" }) {
+    childImageSharp {
+      fluid(
+        quality: 100
+      ) {
+        ...GatsbyImageSharpFluid_noBase64
+      }
+    }
+  }
+  blogCompImage: file(relativePath: { eq: "trimet-blogcomparison.png" }) {
+    childImageSharp {
+      fluid(
+        quality: 100
+      ) {
+        ...GatsbyImageSharpFluid_noBase64
+      }
+    }
+  }
+  styleGuideImage: file(relativePath: { eq: "trimet-styleguide.png" }) {
+    childImageSharp {
+      fluid(
+        quality: 100
+      ) {
+        ...GatsbyImageSharpFluid_noBase64
+      }
+    }
+  }
 }
 `)
 const projects = [
@@ -71,9 +153,15 @@ const projects = [
   },
   {
     year:'2018',
+    name: 'Low Income Registration Portal',
+    status: 'Mockup',
+    anchorLink: 'lowincomeregportal'
+  },
+  {
+    year:'2018',
     name: 'PDX Arrival Screens',
     status: 'Phase II',
-    anchorLink: 'pdxArrivals'
+    anchorLink: 'pdxArrival'
   },
   {
     year:'2018',
@@ -158,10 +246,13 @@ return (
           <Col sm={{span:12}} md={{span:8, offset:2}}>
           <h3 id="otp">Open Trip Planner</h3>
           <Img fluid={data.otpPreviewImage.childImageSharp.fluid} fadeIn={true} />
-          <p className='mb-3'>This project is still on going so I’m very limited to what I can share. My role in this position was UX Designer and an member of a internal committee. For serious job inquiries, please <a href ="mailto:noel@noletorious.com">email me directly</a>.
+          <p className='mb-3'>This project is still in progress so I’m very limited to what I can share. My role in this position is the UX Designer and a member of a internal committee. Highlight of this project so far has been the process of creating user workflows for TriMet's mod. From designing trip plans to real-time transit tracker information and vehicle locations screens this project has been my pride and joy. For serious job inquiries please <a href ="mailto:noel@noletorious.com">email me directly</a>.
           </p>
           &nbsp;
-          <a href="https://trimet.org/newplanner/">Enjoy beta <FontAwesomeIcon icon={faExternalLinkAlt}></FontAwesomeIcon></a>
+          <p>
+          For now <a target="_blank" rel="noopener noreferrer" href="https://trimet.org/newplanner/">learn more and enjoy Beta <FontAwesomeIcon icon={faExternalLinkAlt}></FontAwesomeIcon></a>
+          </p>
+          
           </Col>
         </Row>
         {/* Divider */}
@@ -173,15 +264,15 @@ return (
         {/* Onsite Transit Tracker */}
         <Row className='my-5'>
           <Col sm={{span:12}} md={{span:8, offset:2}}>
-          <h1><em>consider other projects</em></h1>
           <h3 id="onsite">New Onsite Transit Tracker</h3>
-          <p>[Insert Image of solari screen]</p>
+          <Img className="my-5" fluid={data.trimetShelterImage.childImageSharp.fluid} />
           <p>Improving the UI to arrival information for riders is just straight up fun. It is great to be involved in a design that has such high visibility within the town I live in.</p>
           &nbsp;
           <h4>Problem:</h4>
           <p>With the consideration of upgrading our display screens out in the public, we needed a refresh to the new design. With new infrastructure came new capabilities.</p>
           &nbsp;
-          <p>[insert image of current tracker - use onsite example]</p>
+          <Img className="mt-5" fluid={data.oldTTImage.childImageSharp.fluid} />
+          <p className="mb-5 text-muted text-center small">Current</p>
           &nbsp;
           <h5>Research:</h5>
           <p>Questions we asked our riders:</p>
@@ -211,15 +302,16 @@ return (
             <li>Design, create something elegant.</li>
           </ul>
           &nbsp;
-          <p>[insert image of new tracker]</p>
+          <Img className="mt-5" fluid={data.newTTImage.childImageSharp.fluid} />
+          <p className="mb-5 text-muted text-center small">Refresh look</p>
             &nbsp;
           <p>Hopefully the new design speaks for itself. But to summarize, in order to design reach new design requirements:</p>
-          <ul className='mb-4'>
+          <ul className='mb-5'>
             <li>I continued down the dark scheme path because of how it does perform better with outside displays.</li>
             <li>I've included a <em>you are here</em> marker on a map to give users a sense of where they are and where their vehicle is if in the bounded area.</li>
           </ul>
           &nbsp;
-          <a href="#">Enjoy the XD prototype <FontAwesomeIcon icon={faExternalLinkAlt}></FontAwesomeIcon></a>
+          <a target="_blank" rel="noopener noreferrer" href="https://xd.adobe.com/spec/40ecfb26-e4d4-4ece-661e-bc84ace17663-36dd/grid">Enjoy the XD prototype <FontAwesomeIcon icon={faExternalLinkAlt}></FontAwesomeIcon></a>
           </Col>
         </Row>
         {/* Divider */}
@@ -233,24 +325,27 @@ return (
           <Col sm={{span:12}} md={{span:8, offset:2}}>
           <h3 id="flythroughs">Google Earth Flythroughs</h3>
 
-          <p>[Insert gif of after effects replaying going over keyframes]</p>  
+          <img className="my-5" src={trimetFly} alt="google earth fly through"/>
 
           <p>One day, my manager walks up to me one day and said, “I think it would be cool to have a visual for new service lines. Like a top down fly through.” Immediately I thought of the Google Earth fly through tour feature.</p>
           &nbsp;
           <h4>Problem:</h4>
+          &nbsp;
           <p>We needed a visually engaging way to show people about new service and how it connects people within the neighborhood to points of interest along the route. </p>
           &nbsp;
           <h4>Solution:</h4>
+          &nbsp;
           <p>Using Google Earth fly through, produce a video highlighting the new service route along with useful place highlights along the way.</p>
           &nbsp;
-          <h4>Process</h4>
+          <h4>Process:</h4>
+          &nbsp;
           <p>Building the initial video was quite the challenge but having gone through the process, the second and third time around became much easier.</p> 
           <ol>
             <li>First challenge was making sure I spoke to the right people and stakeholders involved with marketing or building the service route; I needed to understand who the route was made for which influenced what exactly to highlight on the map given the video format.</li>
             <li>Second, I wasn’t sure on the most efficient way to record and produce a fly through video. I had gone through a lot of trial and error working between Google Earth and After Effects but eventually I established workflow and a style/pattern for animating objects.</li>
           </ol>
-          <p>My favorite part was syncing it up all together with music.</p>
-          <a href="https://www.youtube.com/watch?v=BO72XAPARzM&list=PLtJW_Q-z9fw8Q2b5tdBReibFKAVfOJEy6">Enjoy the Youtube playlist <FontAwesomeIcon icon={faExternalLinkAlt}></FontAwesomeIcon></a>
+          <p className="mb-5">My favorite part was syncing it up all together with music.</p>
+          <a className="my-5" target="_blank" rel="noopener noreferrer" href="https://www.youtube.com/watch?v=BO72XAPARzM&list=PLtJW_Q-z9fw8Q2b5tdBReibFKAVfOJEy6">Enjoy the Youtube playlist <FontAwesomeIcon icon={faExternalLinkAlt}></FontAwesomeIcon></a>
           </Col>
         </Row>
         {/* Divider */}
@@ -263,9 +358,38 @@ return (
         <Row className='my-5'>
           <Col sm={{span:12}} md={{span:8, offset:2}}>
             <h3 id="insta">Instagram Photo</h3>
-            <p>[Insert image of instagram page in device]</p>
-            <p>Proud of this one because it is probably the coolest photo I’ve ever captured. But the real props goes to the person that made TriMet’s such a respected account, <a href="https://www.brianklum.com/">Brian K. Lum</a>.</p>
+            <Row>
+              <Col className="pt-5 pb-3" sm={{span:12}} md={{span:8, offset:2}} lg={{span:6,offset:0}}>
+                <iframe title="TriMet Instagram" src="https://www.instagram.com/p/ByS8gYEB-bT/embed" width="100%" height="400" frameborder="0" scrolling="no" allowtransparency="true"></iframe>
+              </Col>
+            </Row>
+            <p className="mb-5">Proud of this one because it is probably the coolest photo I’ve ever captured. But the real props goes to the person that made TriMet’s such a respected account, <a href="https://www.brianklum.com/">Brian K. Lum</a>.</p>
             <a href="http://modbeta.trimet.org/">Enjoy the photo <FontAwesomeIcon icon={faExternalLinkAlt}></FontAwesomeIcon></a>
+          </Col>
+        </Row>
+        {/* Divider */}
+        <Row className="my-5">
+          <Col>
+              <div className="border border-secondary border-bottom-0 border-right-0 border-left-0"></div>
+          </Col>
+        </Row>
+        {/* ow Income Registration Portal */}
+        <Row className='my-5'>
+          <Col sm={{span:12}} md={{span:8, offset:2}}>
+            <h3 id="lowincomeregportal">Low Income Registration Portal</h3>
+            &nbsp;
+            <Img fluid={data.lowIncPortalImage.childImageSharp.fluid} />
+            <p className="text-muted small text-center">Initial screen for registering a new applicant</p>
+            &nbsp;
+            <h4>Problem:</h4>
+            &nbsp;
+            <p>We needed an interface for our customer service agents to input new applicants and retrieve information about existing card holders.</p>
+            &nbsp;
+            <h4>Solution:</h4>
+            &nbsp;
+            <p className="mb-5">Our users are customer service agents, they could be out on the field on mobile devices, but most likely on desktop. I kept the interactions simple and plain, listing information clearly and with a linear top down flow.  </p>
+            &nbsp;
+            <a href="https://xd.adobe.com/view/eec3c9ab-103e-4374-479e-0905142980d1-98f2/?fullscreen">Enjoy the mockup prototype <FontAwesomeIcon icon={faExternalLinkAlt}></FontAwesomeIcon></a>
           </Col>
         </Row>
         {/* Divider */}
@@ -278,34 +402,45 @@ return (
         <Row className='my-5'>
           <Col sm={{span:12}} md={{span:8, offset:2}}>
             <h3 id="pdxArrival">PDX Arrival Screens</h3>
-            <p>This project involved working with The Port of Portland and our internal IT department. My main role in this project was UX design and to support our senior developer with front-end development.</p>
+            &nbsp;
+            <p>This project involved working with The Port of Portland and our internal IT department. My main role in this project was UX design and to support our senior developer with front-end development with Reactjs.</p>
             &nbsp;
             <h4>Problem:</h4>
+            &nbsp;
             <p>At PDX, TriMet’s Red Line services people between the airport and downtown Portland. Prior to the project we did not have any arrival/departure times for the MAX.</p>
             &nbsp;
             <h4>Solution:</h4>
+            &nbsp;
             <p>Give people arrival information in specific locations, near the arrivals exit at the ground floor baggage claim and upstairs departures which is right above the MAX. </p>
-            <p>[Insert image of map of locations]</p>
+            <Img className="my-5" fluid={data.pdxMapImage.childImageSharp.fluid} fadeIn={true}/>
             &nbsp;
-            <h4>Design</h4>
-            <p>The way our process went, warranted two phase implementation of design. First to test feasibility, second to apply more data to the sreen.</p>
+            <h4>Design:</h4>
             &nbsp;
-            <h4>Minimal viable product</h4>
-            <p>We landed on this design for the first phase. This included iconography of MAX Light rail, arrival times,current time and TriMet branding.</p>
-            <p>[Insert image of phase one]</p>
+            <p>The only requirement was that the screen we designed had to account for portrait and landscape 16:9 ratio responsiveness. The way our process went, warranted two phase implementation of the design. First to test feasibility, second to apply more data to the sreen.</p>
             &nbsp;
-            <h4>More branding, plus alerts</h4>
-            <p>The second phase we had new considerations that affected the design. </p>
+            <Img className="my-5" fluid={data.pdxScreensImage.childImageSharp.fluid} fadeIn={true}/>
+            &nbsp;
+            <h4>Phase I: Minimal viable product:</h4>
+            &nbsp;
+            <p>We landed on the Version 1 design for the first phase. This included iconography of MAX Light rail, arrival times, current time and TriMet branding.</p>
+            &nbsp;
+            <h4>Phase II: More branding, plus alerts</h4>
+            &nbsp;
+            <p>The second phase we used Version 2 and had new considerations that affected the design. </p>
+            &nbsp;
             <ul>
               <li>People at arriving at PDX, may not recognize the light rail symbol. Use the flat illustration of the vehicle instead. </li>
-              <li>People may not know that they are looking at realtime information. Include a pulsing dot in vehicle in has an estimated arrival.</li>
+              <li>People may not know that they are looking at realtime information at a glance. Include a pulsing dot in vehicle arrival block if time is estimated.</li>
               <li>We have alert information! Created two alert layouts, one for a regular alert, another for a priority alert.</li>
               <li>People are viewing this from a far, we need to account for that. Changed each arrival to have their own capsule, went darker on the background color but not pure black.</li>
             </ul>
             &nbsp;
+            
+            &nbsp;
             <h4>Result:</h4>
-            <p>In the end, we wanted something simple and effective. We already have plans for phase #3, maps, real-time vehicle locations, and more. It’s optimized for a typical wide 16:9 screen:</p>
-            <a href="http://modbeta.trimet.org/">Enjoy the prototype for Phase II design <FontAwesomeIcon icon={faExternalLinkAlt}></FontAwesomeIcon></a>
+            <Img className="my-5" fluid={data.pdxRealScreenImage.childImageSharp.fluid} fadeIn={true} style={{maxWidth:"400px"}}/>
+            <p className="mb-5">In the end, we wanted something simple and effective. We already have plans for phase #3, maps, real-time vehicle locations, and more.</p>
+            <a target="_blank" rel="noopener noreferrer" href="https://xd.adobe.com/spec/62aea832-a8b0-4905-69b9-d0c37f2c6044-149f/grid">Enjoy the prototype for Phase II design <FontAwesomeIcon icon={faExternalLinkAlt}></FontAwesomeIcon></a>
           </Col>
         </Row>
         {/* Divider */}
@@ -319,28 +454,33 @@ return (
           <Col sm={{span:12}} md={{span:8, offset:2}}>
             <h3 id="ridersClub">New Club, New Blog</h3>
             <p>As we prepare for a new marketing strategy, we needed a refresh from our old blog. </p>
-            <p>[Side by side comparison of old]</p>
+            <Img className="my-5" fluid={data.blogCompImage.childImageSharp.fluid} fadeIn={true}/>
             &nbsp;
-            <h4>Strategy</h4>
+            <h4>Strategy:</h4>
+            &nbsp;
             <p>Before designing we considered a few things:</p>
+            &nbsp;
             <ul>
-              <li>We noticed people don’t search for content by filtering content by category</li>
-              <li>People usually find our post from a direct link from social or email</li>
-              <li>We weren't giving the signup for Riders Club the prominence it deserved</li>
+              <li>We noticed people don’t search for content by filtering content by category.</li>
+              <li>People usually would find our post from a direct link from search, social or email.</li>
+              <li>We weren't giving the signup for Riders Club the prominence it deserved.</li>
             </ul>
             &nbsp;
             <h4>Design:</h4>
+            &nbsp;
             <p>So what we did was make a lot of decisions before and committed to those constraints in the design in order to keep the blog as clean as possible. For example:</p>
+            &nbsp;
             <ul>
               <li>In addition to not including a category list as navigation, we decided we didn’t need a menu either. This kept it clean at the top.</li>
               <li>We decided to keep getting rid of sharing options on blog post pages.</li>
               <li>We wanted to leverage our awesome pictures, so images needed to work well with text.</li>
-              <li>Created a more large and in charge section for Riders Club signups</li>
+              <li>Created a more large and in charge section for Riders Club signups.</li>
             </ul>
             &nbsp;
             <h4>Results:</h4>
-            <p>An increased rate of Rider Club signups from the blog:</p>
-            <a href="http://blog.trimet.org/">Follow and enjoy the blog <FontAwesomeIcon icon={faExternalLinkAlt}></FontAwesomeIcon></a>
+            &nbsp;
+            <p className="mb-5">An increased rate of Rider Club signups from the blog. Follow us!</p>
+            <a target="_blank" rel="noopener noreferrer" href="http://blog.trimet.org/">Follow and enjoy the blog <FontAwesomeIcon icon={faExternalLinkAlt}></FontAwesomeIcon></a>
           </Col>
         </Row>
         {/* Divider */}
@@ -353,23 +493,25 @@ return (
         <Row className='my-5'>
           <Col sm={{span:12}} md={{span:8, offset:2}}>
             <h3 id="stylesGuide">Web Style Guide Lines</h3>
-            <p>[Insert preview image of style guide]</p>
+            <Img className="my-5" fluid={data.styleGuideImage.childImageSharp.fluid} fadeIn={true}/>
             <p>Before working at TriMet, there was a style guide for print and general messaging but none specifically for digital design. This was my chance to establish a TriMet Design System.</p>
             &nbsp;
             <h4>Problem:</h4>
+            &nbsp;
             <p>Putting myself in the shoes of a new hire or a web contractor that is assigned to a project, we didn’t have an official place describing an agreed upon style guidelines. </p>
             &nbsp;
             <h4>Strategy:</h4>
-            <p>Work with my manager to develop a style guideline that worked in parallel with our messaging. With our design drive the direction with our development team to use StoryboardJs to have an official place to manage our React UI components.</p>
-            <a href="http://modbeta.trimet.org/">Enjoy our preview style guide <FontAwesomeIcon icon={faExternalLinkAlt}></FontAwesomeIcon></a>
+            &nbsp;
+            <p className="mb-5">Work with my manager to develop a style guideline that worked in parallel with our messaging. With our design drive the direction with our development team to use StoryboardJs to have an official place to manage our React UI components.</p>
+            <a target="_blank" rel="noopener noreferrer" href="https://xd.adobe.com/view/47f4d433-c38c-438e-4b42-0a08029d03e3-31c5/">Enjoy our preview style guide <FontAwesomeIcon icon={faExternalLinkAlt}></FontAwesomeIcon></a>
           </Col>
         </Row>
     </Container>
-    <Container fluid style={{background:"#323232",paddingTop:'300px',paddingBottom:'300px'}}>
+    <Container fluid style={{background:"#fff",paddingTop:'100px',paddingBottom:'100px'}}>
       <Row>
           <Col sm={{span:12}} md={{span:12}}>
             &nbsp;
-            {/* <img src={attensaLogoAnimation} className="mx-auto d-block" style={{maxWidth:'600px'}} alt="Attensa Motion" /> */}
+            <img src={trimetLogo} className="mx-auto d-block" style={{maxWidth:'600px'}} alt="Attensa Motion" />
             <p className="text-center text-light">[Instert trimet bumper gif]</p>
           </Col>
         </Row>
