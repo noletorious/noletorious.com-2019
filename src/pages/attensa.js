@@ -7,8 +7,8 @@ import Layout from "../layouts/page"
 import SEO from "../components/seo"
 import Img from 'gatsby-image'
 import attensaLogoAnimation from '../images/attensa-animation.gif'
-import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
-import {faExternalLinkAlt} from '@fortawesome/free-solid-svg-icons'
+// import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
+// import {faExternalLinkAlt} from '@fortawesome/free-solid-svg-icons'
 
 const Attensa = () => {
   const data = useStaticQuery(graphql`

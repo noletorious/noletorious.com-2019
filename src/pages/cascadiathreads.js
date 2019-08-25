@@ -6,9 +6,10 @@ import { useStaticQuery, graphql } from "gatsby"
 import Layout from "../layouts/page"
 import SEO from "../components/seo"
 import Img from 'gatsby-image'
+import Carousel from "react-bootstrap/Carousel"
 import ctAnimation from '../images/ct-animation.gif'
-import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
-import {faExternalLinkAlt} from '@fortawesome/free-solid-svg-icons'
+// import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
+// import {faExternalLinkAlt} from '@fortawesome/free-solid-svg-icons'
 
 const cascadiaThreads = () => {
   const data = useStaticQuery(graphql`
@@ -30,14 +31,68 @@ const cascadiaThreads = () => {
         ...GatsbyImageSharpFluid
       }
     }
-}
+  }
+  websiteFlowImage: file(relativePath: { eq: "ct-userflow.jpg" }) {
+    childImageSharp {
+      fluid(
+        quality: 100
+      ) {
+        ...GatsbyImageSharpFluid
+      }
+    }
+  }
+  ctWeWorkImage: file(relativePath: { eq: "ct-wework.jpg" }) {
+    childImageSharp {
+      fluid(
+        quality: 100
+      ) {
+        ...GatsbyImageSharpFluid
+      }
+    }
+  }
+  storeListImage: file(relativePath: { eq: "ct-storelist.png" }) {
+    childImageSharp {
+      fluid(
+        quality: 100
+      ) {
+        ...GatsbyImageSharpFluid
+      }
+    }
+  }
+  slide1Image: file(relativePath: { eq: "ct-slide1.jpg" }) {
+    childImageSharp {
+      fluid(
+        quality: 100
+      ) {
+        ...GatsbyImageSharpFluid
+      }
+    }
+  }
+  slide2Image: file(relativePath: { eq: "ct-slide2.jpg" }) {
+    childImageSharp {
+      fluid(
+        quality: 100
+      ) {
+        ...GatsbyImageSharpFluid
+      }
+    }
+  }
+  slide3Image: file(relativePath: { eq: "ct-slide3.jpg" }) {
+    childImageSharp {
+      fluid(
+        quality: 100
+      ) {
+        ...GatsbyImageSharpFluid
+      }
+    }
+  }
 }
 `)
 
 return (
   <Layout>
     <SEO title="About Noel" />
-    <Container className='my-5 text-light'>
+    <Container className='mt-5 text-light'>
         <Row>
           <Col sm={{span:12}} md={{span:8, offset:2}}>
             <Img fluid={data.ctTextLogoImage.childImageSharp.fluid} style={{maxWidth:'200px',marginBottom:".5em"}}/>
@@ -84,11 +139,11 @@ return (
           &nbsp;
           <h5>Apparel and Collaborations</h5>
           &nbsp;
-          <p>[insert image of WeWork photoshoot</p>
+          <Img fluid={data.ctWeWorkImage.childImageSharp.fluid} className="my-5"/>
           &nbsp;
-          <p>Worked with a local and in my opinion the best photographer and screen printing company in Portland. Oregon Screen Impressions, in 2015 we had them print our designs on organic cottom, all made in the USA. </p>
+          <p>Worked with a local and in my opinion the best photographer and screen printing company in Portland. <a href="https://www.oregonscreen.com/" target="_blank" rel="noopener noreferrer">Oregon Screen Impressions</a>, in 2015 we had them print our designs on organic cottom, all made in the USA. </p>
           &nbsp;
-          <p>In 2016, we did a photoshot at the WeWork Custom house with Blackprints. I was a honor to work with the talented Nesrin at such a photogenic location. My role was to hire our models and make sure the photoshoot went accoringly.</p>
+          <p>In 2016, we did a photoshot at the <a href="https://www.wework.com/l/portland--OR" target="_blank" rel="noopener noreferrer">WeWork Custom House</a> with <a href="http://www.nesrindanan.com/" target="_blank" rel="noopener noreferrer">Blackprints</a>. I was a honor to work with the talented Nesrin at such a photogenic location. My role was to hire our models and make sure the photoshoot went accoringly.</p>
           &nbsp;
           <h5>Web &amp; and Digital</h5>
           &nbsp;
@@ -96,23 +151,60 @@ return (
           &nbsp;
           <p>Designing the user flows of the website, here are a few examples of a few critical pages and what it would be like if users were working through them: From the front page, to a single product page, to a checkout rundown page.</p>
           &nbsp;
-          <p>[insert low fidelity flow of pages described above]</p>
+          <Img fluid={data.websiteFlowImage.childImageSharp.fluid} />
           &nbsp;
           <h5>The Future</h5>
           &nbsp;
           <p>As low fidelity designs got the thumbs up from others on the team, we started to develop but brought the site down late 2018. As a last thought, I really do hope we back the brand, I honestly think it has the potential to be picked up by a niche community in Portland. Enjoy a mockup of the single product page:</p>
-          &nbsp;
-          <p>[Insert high fidelity of product page in a browser ]</p>
-          &nbsp;
+          <Img fluid={data.storeListImage.childImageSharp.fluid} style={{marginBottom:"-5em"}}/>
           </Col>
         </Row>
+        {/* <Row sm={{span:12}}>
+          <Col>
+          &nbsp;
+            
+          &nbsp;
+          </Col>
+        </Row> */}
     </Container>
-    <Container fluid style={{background:"#323232",paddingTop:'100px',paddingBottom:'100px'}}>
+    <Container fluid style={{background:"#323232"}}>
       <Row>
-          <Col sm={{span:12}} md={{span:12}}>
-            &nbsp;
-            {/* <img src={attensaLogoAnimation} className="mx-auto d-block" style={{maxWidth:'600px'}} alt="Attensa Motion" /> */}
-            <p className="text-center text-light">[Insert we work photography shoot]</p>
+          <Col sm={{span:12}} md={{span:12}} className="px-0">
+<Carousel interval={8000}>
+  <Carousel.Item>
+    <img
+      className="d-block w-100"
+      src={data.slide1Image.childImageSharp.fluid.src}
+      alt="First slide"
+    />
+    {/* <Carousel.Caption>
+      <h3>First slide label</h3>
+      <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+    </Carousel.Caption> */}
+  </Carousel.Item>
+  <Carousel.Item>
+    <img
+      className="d-block w-100"
+      src={data.slide2Image.childImageSharp.fluid.src}
+      alt="Third slide"
+    />
+    {/* <Carousel.Caption>
+      <h3>Second slide label</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    </Carousel.Caption> */}
+  </Carousel.Item>
+  <Carousel.Item>
+    <img
+      className="d-block w-100"
+      src={data.slide3Image.childImageSharp.fluid.src}
+      alt="Third slide"
+    />
+    {/* <Carousel.Caption>
+      <h3>Third slide label</h3>
+      <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+    </Carousel.Caption> */}
+  </Carousel.Item>
+</Carousel>
           </Col>
         </Row>
     </Container>
