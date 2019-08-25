@@ -271,7 +271,7 @@ return (
       <Row>
           <Col xs={{span:12}} sm={{span:8,offset:2}} md={{span:6, offset:3}}>
             &nbsp;
-            <img src={hopLogoAnimation} className="mx-auto d-block" style={{maxWidth:'600px'}} alt="Hop Logo" />
+            <img src={hopLogoAnimation} className="mx-auto img-fluid d-block" style={{maxWidth:'600px'}} alt="Hop Motion" />
           </Col>
         </Row>
     </Container>

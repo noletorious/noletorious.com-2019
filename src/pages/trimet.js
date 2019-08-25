@@ -511,8 +511,7 @@ return (
       <Row>
           <Col sm={{span:12}} md={{span:12}}>
             &nbsp;
-            <img src={trimetLogo} className="mx-auto d-block" style={{maxWidth:'600px'}} alt="Attensa Motion" />
-            <p className="text-center text-light">[Instert trimet bumper gif]</p>
+            <img src={trimetLogo} className="mx-auto img-fluid d-block" style={{maxWidth:'600px'}} alt="TriMet Motion" />
           </Col>
         </Row>
     </Container>

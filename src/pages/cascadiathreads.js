@@ -212,7 +212,7 @@ return (
       <Row>
           <Col xs={{span:12}} sm={{span:8, offest:2}} md={{span:6, offset:3}}>
             &nbsp;
-            <img src={ctAnimation} className="mx-auto d-block"  alt="Cascadia Threads Motion" />
+            <img src={ctAnimation} className="mx-auto img-fluid d-block"  alt="Cascadia Threads Motion" />
           </Col>
         </Row>
     </Container>
