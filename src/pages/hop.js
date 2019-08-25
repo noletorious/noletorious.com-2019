@@ -108,7 +108,7 @@ const projects = [
 ]
 return (
   <Layout>
-    <SEO title="About Noel" />
+    <SEO title="Hop Fastpass" />
     <Container className='my-5 text-light'>
         <Row>
           <Col sm={{span:12}} md={{span:8, offset:2}}>
@@ -221,7 +221,7 @@ return (
               &nbsp;
              <img src={hopGoogleVC} alt="Virtual Hopster Card Animation" style={{maxWidth:'200px'}} />
               &nbsp;
-              <p className="mb-5">For this project, I was tasked to create something never done in the space of Google Pay. Working with developers, I provided them an animation to include on the virtual card when the card is selected. It turned out to be subtle, cute, and retrospectively we realized the motion was a great way to indicate a valid fare</p>
+              <p className="mb-5">This project I was tasked to create something never done in the space of a Google Pay payment option. Working with developers, I provided them an animation to include on the virtual card when the card is selected. It turned out to be subtle, cute, and retrospectively we realized the motion was a great way to indicate a valid fare</p>
               <a className="d-block" href="https://play.google.com/store/apps/details?id=org.trimet.mt.accounts">Download Hop for Android<FontAwesomeIcon icon={faExternalLinkAlt}></FontAwesomeIcon></a>
           </Col>
         </Row>
@@ -271,7 +271,7 @@ return (
       <Row>
           <Col xs={{span:12}} sm={{span:8,offset:2}} md={{span:6, offset:3}}>
             &nbsp;
-            <img src={hopLogoAnimation} className="mx-auto img-fluid d-block" style={{maxWidth:'600px'}} alt="Hop Motion" />
+            <img src={hopLogoAnimation} className="mx-auto img-fluid d-block" alt="Hop Motion" />
           </Col>
         </Row>
     </Container>

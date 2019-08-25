@@ -91,7 +91,7 @@ const cascadiaThreads = () => {
 
 return (
   <Layout>
-    <SEO title="About Noel" />
+    <SEO title="Cascadia Threads" />
     <Container className='mt-5 text-light'>
         <Row>
           <Col sm={{span:12}} md={{span:8, offset:2}}>
@@ -155,8 +155,10 @@ return (
           &nbsp;
           <h5>The Future</h5>
           &nbsp;
-          <p>As low fidelity designs got the thumbs up from others on the team, we started to develop but brought the site down late 2018. As a last thought, I really do hope we back the brand, I honestly think it has the potential to be picked up by a niche community in Portland. Enjoy a mockup of the single product page:</p>
-          <Img fluid={data.storeListImage.childImageSharp.fluid} style={{marginBottom:"-5em"}}/>
+          <p>As low fidelity designs got the thumbs up from others on the team, we started to develop but brought the site down late 2018.</p>
+          &nbsp;
+          <p> As a last thought, I really do hope we back the brand, I honestly think it has the potential to be picked up by a niche community in Portland. Enjoy a mockup of the single product page:</p>
+          <Img fluid={data.storeListImage.childImageSharp.fluid} style={{marginBottom:"-5em", marginTop:"3em"}}/>
           </Col>
         </Row>
         {/* <Row sm={{span:12}}>

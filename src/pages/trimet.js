@@ -178,7 +178,7 @@ const projects = [
 ]
 return (
   <Layout>
-    <SEO title="About Noel" />
+    <SEO title="TriMet" />
     <Container className='my-5 text-light'>
         {/* Job description */}
         <Row>
@@ -264,16 +264,25 @@ return (
         {/* Onsite Transit Tracker */}
         <Row className='my-5'>
           <Col sm={{span:12}} md={{span:8, offset:2}}>
-          <h3 id="onsite">New Onsite Transit Tracker</h3>
-          <Img className="my-5" fluid={data.trimetShelterImage.childImageSharp.fluid} />
-          <p>Improving the UI to arrival information for riders is just straight up fun. It is great to be involved in a design that has such high visibility within the town I live in.</p>
-          &nbsp;
-          <h4>Problem:</h4>
-          <p>With the consideration of upgrading our display screens out in the public, we needed a refresh to the new design. With new infrastructure came new capabilities.</p>
-          &nbsp;
+            <h3 id="onsite">New Onsite Transit Tracker</h3>
+            <Img className="my-5" fluid={data.trimetShelterImage.childImageSharp.fluid} />
+            <p>Improving the UI to arrival information for riders is just straight up fun. It is great to be involved in a design that has such high visibility within the town I live in.</p>
+            &nbsp;
+            <h4>Problem:</h4>
+            <p>With the consideration of upgrading our display screens out in the public, we needed a refresh to the new design. With new infrastructure came new capabilities.</p>
+            &nbsp;
+          </Col>
+        </Row>
+        {/* Onsite Transit Tracker old TT Image */}
+        <Row>
+          <Col sm={{span:12}}>
           <Img className="mt-5" fluid={data.oldTTImage.childImageSharp.fluid} />
           <p className="mb-5 text-muted text-center small">Current</p>
-          &nbsp;
+          </Col>
+        </Row>
+        {/* Onsite Transit Tracker continued */}
+        <Row className='mb-5'>
+          <Col sm={{span:12}} md={{span:8, offset:2}}>
           <h5>Research:</h5>
           <p>Questions we asked our riders:</p>
           &nbsp;
@@ -301,9 +310,18 @@ return (
             <li>Context, at a glance users should understand where they are and where their next vehicle is.</li>
             <li>Design, create something elegant.</li>
           </ul>
-          &nbsp;
+          </Col>
+        </Row>
+          {/* Onsite Transit Tracker new TT Image */}
+        <Row>
+          <Col sm={{span:12}}>
           <Img className="mt-5" fluid={data.newTTImage.childImageSharp.fluid} />
           <p className="mb-5 text-muted text-center small">Refresh look</p>
+          </Col>
+        </Row>
+        {/* Onsite Transit Tracker continued */}
+        <Row className='mb-5'>
+          <Col sm={{span:12}} md={{span:8, offset:2}}>
             &nbsp;
           <p>Hopefully the new design speaks for itself. But to summarize, in order to design reach new design requirements:</p>
           <ul className='mb-5'>
@@ -327,7 +345,7 @@ return (
 
           <img className="my-5" src={trimetFly} alt="google earth fly through"/>
 
-          <p>One day, my manager walks up to me one day and said, “I think it would be cool to have a visual for new service lines. Like a top down fly through.” Immediately I thought of the Google Earth fly through tour feature.</p>
+          <p>My manager walks up to me one day and says, “I think it would be cool to have a visual for new service lines. Like a top down fly through.” Immediately I thought of the Google Earth flythrough tour feature.</p>
           &nbsp;
           <h4>Problem:</h4>
           &nbsp;
@@ -335,7 +353,7 @@ return (
           &nbsp;
           <h4>Solution:</h4>
           &nbsp;
-          <p>Using Google Earth fly through, produce a video highlighting the new service route along with useful place highlights along the way.</p>
+          <p>Using Google Earth's tour feature, produce a video highlighting useful places to know along the new service route.</p>
           &nbsp;
           <h4>Process:</h4>
           &nbsp;
@@ -377,9 +395,19 @@ return (
         <Row className='my-5'>
           <Col sm={{span:12}} md={{span:8, offset:2}}>
             <h3 id="lowincomeregportal">Low Income Registration Portal</h3>
-            &nbsp;
-            <Img fluid={data.lowIncPortalImage.childImageSharp.fluid} />
+          </Col>
+        </Row>
+        {/* Low Income Registration Portal image */}
+        <Row>
+          <Col sm={{span:12}}>
+          <Img fluid={data.lowIncPortalImage.childImageSharp.fluid} />
             <p className="text-muted small text-center">Initial screen for registering a new applicant</p>
+          </Col>
+        </Row>
+        {/* Low Income Registration Portal Continued*/}
+        <Row className='my-5'>
+          <Col sm={{span:12}} md={{span:8, offset:2}}>
+            
             &nbsp;
             <h4>Problem:</h4>
             &nbsp;
@@ -399,7 +427,7 @@ return (
           </Col>
         </Row>
         {/* PDX Arrival Screens */}
-        <Row className='my-5'>
+        <Row className='mt-5'>
           <Col sm={{span:12}} md={{span:8, offset:2}}>
             <h3 id="pdxArrival">PDX Arrival Screens</h3>
             &nbsp;
@@ -418,7 +446,17 @@ return (
             &nbsp;
             <p>The only requirement was that the screen we designed had to account for portrait and landscape 16:9 ratio responsiveness. The way our process went, warranted two phase implementation of the design. First to test feasibility, second to apply more data to the sreen.</p>
             &nbsp;
-            <Img className="my-5" fluid={data.pdxScreensImage.childImageSharp.fluid} fadeIn={true}/>
+            </Col>
+          </Row>
+        <Row>
+          <Col sm={{span:12}}>
+          <Img className="my-5" fluid={data.pdxScreensImage.childImageSharp.fluid} fadeIn={true}/>
+          </Col>
+        </Row>
+        {/* PDX Arrival Screens Continued*/}
+        <Row className='mb-5'>
+          <Col sm={{span:12}} md={{span:8, offset:2}}>
+            
             &nbsp;
             <h4>Phase I: Minimal viable product:</h4>
             &nbsp;
@@ -450,11 +488,20 @@ return (
           </Col>
         </Row>
         {/* New Club, New Blog */}
-        <Row className='my-5'>
+        <Row className='mt-5'>
           <Col sm={{span:12}} md={{span:8, offset:2}}>
             <h3 id="ridersClub">New Club, New Blog</h3>
             <p>As we prepare for a new marketing strategy, we needed a refresh from our old blog. </p>
-            <Img className="my-5" fluid={data.blogCompImage.childImageSharp.fluid} fadeIn={true}/>
+          </Col>
+        </Row>
+        <Row>
+          <Col sm={{span:12}}>
+          <Img className="my-5" fluid={data.blogCompImage.childImageSharp.fluid} fadeIn={true}/>
+          </Col>
+        </Row>
+        {/* New Club, New Blog Continued */}
+        <Row className='mb-5'>
+          <Col sm={{span:12}} md={{span:8, offset:2}}>
             &nbsp;
             <h4>Strategy:</h4>
             &nbsp;
@@ -490,10 +537,20 @@ return (
           </Col>
         </Row>
         {/* Web Style Guide Lines */}
-        <Row className='my-5'>
+        <Row className='mt-5'>
           <Col sm={{span:12}} md={{span:8, offset:2}}>
             <h3 id="stylesGuide">Web Style Guide Lines</h3>
-            <Img className="my-5" fluid={data.styleGuideImage.childImageSharp.fluid} fadeIn={true}/>
+          </Col>
+        </Row>
+        <Row>
+          <Col sm={{span:12}}>
+          <Img className="my-5" fluid={data.styleGuideImage.childImageSharp.fluid} fadeIn={true}/>
+          </Col>
+        </Row>
+        {/* Web Style Guide Lines Continued*/}
+        <Row className='mb-5'>
+          <Col sm={{span:12}} md={{span:8, offset:2}}>
+           
             <p>Before working at TriMet, there was a style guide for print and general messaging but none specifically for digital design. This was my chance to establish a TriMet Design System.</p>
             &nbsp;
             <h4>Problem:</h4>
@@ -507,11 +564,11 @@ return (
           </Col>
         </Row>
     </Container>
-    <Container fluid style={{background:"#fff",paddingTop:'100px',paddingBottom:'100px'}}>
+    <Container fluid style={{background:"#fff"}}>
       <Row>
           <Col sm={{span:12}} md={{span:12}}>
             &nbsp;
-            <img src={trimetLogo} className="mx-auto img-fluid d-block" style={{maxWidth:'600px'}} alt="TriMet Motion" />
+            <img src={trimetLogo} className="mx-auto img-fluid d-block" alt="TriMet Motion" />
           </Col>
         </Row>
     </Container>

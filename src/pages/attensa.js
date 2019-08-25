@@ -135,7 +135,7 @@ const Attensa = () => {
 
 return (
   <Layout>
-    <SEO title="About Noel" />
+    <SEO title="Attensa" />
     <Container className='mt-5 text-light'>
       {/* Job Description */}
         <Row>
