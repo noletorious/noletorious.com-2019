@@ -246,7 +246,7 @@ return (
           <Col sm={{span:12}} md={{span:8, offset:2}}>
           <h3 id="otp">Open Trip Planner</h3>
           <Img fluid={data.otpPreviewImage.childImageSharp.fluid} fadeIn={true} />
-          <p className='mb-3'>This project is still in progress so I’m very limited to what I can share. My role in this position is the UX Designer and a member of a internal committee. </p>
+          <p className='mb-3'>This project is still in progress so I’m very limited to what I can share. My role in this project is the UX Designer and a member of an internal committee. </p>
           &nbsp;
           <p>The highlight of this project so far has been the process of creating user workflows for TriMet's mod. From designing trip plans to real-time transit tracker information and vehicle locations screens this project has been my pride and joy. For serious job inquiries please <a href ="mailto:noel@noletorious.com">email me directly</a>.
           </p>
