@@ -264,63 +264,56 @@ return (
           </Col>
         </Row>
         {/* Onsite Transit Tracker */}
-        <Row className='my-5'>
+        <Row className='mt-5'>
           <Col sm={{span:12}} md={{span:8, offset:2}}>
             <h3 id="onsite">New Onsite Transit Tracker</h3>
             <Img className="my-5" fluid={data.trimetShelterImage.childImageSharp.fluid} />
             <p>Improving the UI to arrival information for riders is just straight up fun. It is great to be involved in a design that has such high visibility within the town I live in.</p>
             &nbsp;
             <h4>Problem:</h4>
+            &nbsp;
             <p>With the consideration of upgrading our display screens out in the public, we needed a refresh to the new design. With new infrastructure came new capabilities.</p>
             &nbsp;
-          </Col>
-        </Row>
-        {/* Onsite Transit Tracker old TT Image */}
-        <Row>
-          <Col sm={{span:12}}>
-          <Img className="mt-5" fluid={data.oldTTImage.childImageSharp.fluid} />
-          <p className="mb-5 text-muted text-center small">Current</p>
+            <Img className="my-4" fluid={data.oldTTImage.childImageSharp.fluid} />
           </Col>
         </Row>
         {/* Onsite Transit Tracker continued */}
-        <Row className='mb-5'>
+        <Row className='my-5'>
           <Col sm={{span:12}} md={{span:8, offset:2}}>
           <h5>Research:</h5>
           <p>Questions we asked our riders:</p>
           &nbsp;
           <Row>
             <Col xs={{span:12}} sm={{span:6}}>
-              <div className="p-3 my-3 rounded bg-dark border">
+              <div className="p-3 my-3 rounded border">
                 <h5 className="mb-3"><em>Is the current transit tracker useful?</em></h5>
-                <p className="small"><strong>Purpose of asking:</strong> So we can get a sense of any immediate red flags that people dislike about it. </p>
+                <p className="small text-muted"><strong>Purpose of asking:</strong> So we can get a sense of any immediate red flags that people dislike about it. </p>
                 <p className="mb-0 small"><strong>Results:</strong> Yes, turns out people trust the information as being more reliable than third-party apps.</p>
               </div>
             </Col>
             <Col xs={{span:12}} sm={{span:6}}>
-              <div className="p-3 my-3 rounded bg-dark border">
+              <div className="p-3 my-3 rounded border">
                 <h5 className="mb-3"><em>What other information would they like to know at their stop?</em></h5>
-                <p className="small"><strong>Purpose of asking:</strong> So we can get a sense of what people want to generally know when looking at these screens.</p>
+                <p className="small text-muted"><strong>Purpose of asking:</strong> So we can get a sense of what people want to generally know when looking at these screens.</p>
                 <p className="mb-0 small"><strong>Results:</strong>The top want is, vehicle location and it’s relation to where they are.</p>
               </div>
             </Col>
           </Row>
           &nbsp;
           <h4>Design:</h4>
+          &nbsp;
           <p>With the knowledge we gained by simply asking riders, jump started the design. The two big improvements I wanted to solve was:</p>
           <ul>
             <li>Visibility, increasing contrast and improving the ADA compliance score.</li>
             <li>Context, at a glance users should understand where they are and where their next vehicle is.</li>
             <li>Design, create something elegant.</li>
           </ul>
-          </Col>
-        </Row>
-          {/* Onsite Transit Tracker new TT Image */}
-        <Row>
-          <Col sm={{span:12}}>
+          &nbsp;
           <Img className="mt-5" fluid={data.newTTImage.childImageSharp.fluid} />
           <p className="mb-5 text-muted text-center small">Refresh look</p>
           </Col>
         </Row>
+
         {/* Onsite Transit Tracker continued */}
         <Row className='mb-5'>
           <Col sm={{span:12}} md={{span:8, offset:2}}>
@@ -335,7 +328,7 @@ return (
           </Col>
         </Row>
         {/* Divider */}
-        <Row className="my-5">
+        <Row className="mb-5">
           <Col>
               <div className="border border-secondary border-bottom-0 border-right-0 border-left-0"></div>
           </Col>
