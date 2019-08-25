@@ -99,9 +99,9 @@ const Navigation = (props) => {
                               <div className="ml-sm-auto p-2">
                                 <SpringLink to="/about">About</SpringLink>
                               </div>
-                              <div className="p-2">
+                              {/* <div className="p-2">
                                 <SpringLink to="/blog">Latest</SpringLink>
-                              </div>
+                              </div> */}
                               <div className="p-2">
                                 <Link 
                                   to="/#work">Work
