@@ -14,7 +14,7 @@ const Footer = () => {
 
     useEffect(() => {
         console.log('======useEffect======')
-        axios.get('http://api.openweathermap.org/data/2.5/weather?id=5746545&units=imperial&appid=9ff3b3252f2b747c427a1c0be7eecc50')
+        axios.get('https://api.openweathermap.org/data/2.5/weather?id=5746545&units=imperial&appid=9ff3b3252f2b747c427a1c0be7eecc50')
         .then(response =>{
             setData(response.data)
             // console.log(response)
