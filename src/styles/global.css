@@ -21,6 +21,7 @@ a:hover{
     opacity:50% !important;
     border-bottom: solid;
     padding-bottom: 6px;
+    font-weight:bold;
 }
 #nav a:hover{
     text-decoration: none;

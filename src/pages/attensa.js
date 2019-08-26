@@ -184,7 +184,8 @@ return (
           </div>
           &nbsp;
           <h3 className="mt-5">Strategy/Design:</h3>
-          <p>During my time at Attensa, I helped design the Topic view segment of the app. A Topic is essentially a container managed by content curators, where consumers can subscribe or be assigned to depending on how the organization setup. I collaborated closely with product managers on working through and exploring UX flows on main tasks as well as micro-interactions.</p>
+          &nbsp;
+          <p>During my time at Attensa, I helped design the Topic view segment of the app. A Topic is essentially a container managed by content curators, where consumers can subscribe or be assigned to depending on how the organization is setup. I collaborated closely with product managers on working through and exploring UX flows on main tasks as well as micro-interactions.</p>
           &nbsp;
           <p>This does not reflect the current product. But here are a few screen mockups I created to demonstrate the new feature at the time, the Topic View. Heres what I can share:</p>
           </Col>
@@ -192,7 +193,7 @@ return (
         {/* Topic View Image */}
         <Row>
           <Col sm={{span:12}} md={{span:12}}>
-            <div className="w-100 py-4">
+            <div className="w-100 py-5">
               <Img className='mx-auto' fluid={data.topicViewImage.childImageSharp.fluid} style={{maxWidth:'900px'}} fadeIn={true}/>
               <p className="small text-muted text-center">Topic View on the consumer side</p>
             </div>            
@@ -238,7 +239,7 @@ return (
           </Col>
         </Row>
         <Row>
-          <Col sm={{span:12}} md={{span:12}} className="mb-5">
+          <Col sm={{span:12}} md={{span:12}} className="my-5">
             <Img fluid={data.sketchImage.childImageSharp.fluid} fadeIn={true}/>
           </Col>
         </Row>

@@ -141,23 +141,23 @@ return (
           &nbsp;
           <Img fluid={data.ctWeWorkImage.childImageSharp.fluid} className="my-5"/>
           &nbsp;
-          <p>Worked with a local and in my opinion the best photographer and screen printing company in Portland. <a href="https://www.oregonscreen.com/" target="_blank" rel="noopener noreferrer">Oregon Screen Impressions</a>, in 2015 we had them print our designs on organic cottom, all made in the USA. </p>
+          <p>We kept it local with the best photographer and screen printing company in Portland. <a href="https://www.oregonscreen.com/" target="_blank" rel="noopener noreferrer">Oregon Screen Impressions</a> in 2015, we had them print our designs on organic cotton, all made in the USA. </p>
           &nbsp;
-          <p>In 2016, we did a photoshot at the <a href="https://www.wework.com/l/portland--OR" target="_blank" rel="noopener noreferrer">WeWork Custom House</a> with <a href="http://www.nesrindanan.com/" target="_blank" rel="noopener noreferrer">Blackprints</a>. I was a honor to work with the talented Nesrin at such a photogenic location. My role was to hire our models and make sure the photoshoot went accoringly.</p>
+          <p>In 2016, we did a photoshot at the <a href="https://www.wework.com/l/portland--OR" target="_blank" rel="noopener noreferrer">WeWork Custom House</a> with <a href="http://www.nesrindanan.com/" target="_blank" rel="noopener noreferrer">Blackprints</a>. I was an honor to work with the talented Nesrin at such a photogenic location. My role was to hire our models and make sure the photoshoot went accoringly.</p>
           &nbsp;
           <h5>Web &amp; and Digital</h5>
           &nbsp;
           <p>The website was built with Wordpress and the backend store Woocommerce. The best rule when designing a store is to keep the clear what we are selling, so the design needed to accomplish that. We used white space generously, used accents and muted colors on text to avoid having everything bold, and made sure the mobile experience was comparable.</p>
           &nbsp;
-          <p>Designing the user flows of the website, here are a few examples of a few critical pages and what it would be like if users were working through them: From the front page, to a single product page, to a checkout rundown page.</p>
+          <p>Here is an early sketch of interactions and general layout. From the front page, to a single product page, to a checkout rundown page and a bunch of scribbles here and there.</p>
           &nbsp;
           <Img fluid={data.websiteFlowImage.childImageSharp.fluid} />
           &nbsp;
           <h5>The Future</h5>
           &nbsp;
-          <p>As low fidelity designs got the thumbs up from others on the team, we started to develop but brought the site down late 2018.</p>
+          <p>As low fidelity designs received the thumbs up from others on the team, we started to develop but brought the site down late 2018.</p>
           &nbsp;
-          <p> As a last thought, I really do hope we back the brand, I honestly think it has the potential to be picked up by a niche community in Portland. Enjoy a mockup of the single product page:</p>
+          <p>As a last thought, I really do hope we bring back the brand. I honestly think it has the potential to be picked up by a niche community in Portland. Enjoy a mockup of the single product page:</p>
           <Img fluid={data.storeListImage.childImageSharp.fluid} style={{marginBottom:"-5em", marginTop:"3em"}}/>
           </Col>
         </Row>

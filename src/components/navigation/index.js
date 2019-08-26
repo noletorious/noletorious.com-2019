@@ -40,7 +40,8 @@ const Navigation = (props) => {
                 }}
               >
                 {props => 
-                    <div id='nav' className="bg-white d-flex d-flex-row flex-wrap align-items-center border-bottom" style={props}>
+                    <div id='nav' 
+                    className={["bg-white", "d-flex", "d-flex-row", "flex-wrap", "align-items-center", !isHomeStatus ? "border-bottom" : null].join(' ')} style={props}>
                         <Container>
                           <Row>
                             {/* Back, Home, Name and Title */}
@@ -95,7 +96,7 @@ const Navigation = (props) => {
                               
                             </Col>
                             {/* About, Work */}
-                            <Col className="d-flex align-items-center nav-items justify-content-center justify-content-sm-start" xs={{span:12}} sm={{span:4}}>
+                            <Col className="d-flex align-items-center nav-items justify-content-center justify-content-sm-start" xs={{span:12}} sm={{span:4}} style={{fontSize:'120%'}}>
                               <div className="ml-sm-auto p-2">
                                 <SpringLink to="/about">About</SpringLink>
                               </div>

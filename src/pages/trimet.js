@@ -268,19 +268,21 @@ return (
           <Col sm={{span:12}} md={{span:8, offset:2}}>
             <h3 id="onsite">New Onsite Transit Tracker</h3>
             <Img className="my-5" fluid={data.trimetShelterImage.childImageSharp.fluid} />
-            <p>Improving the UI to arrival information for riders is just straight up fun. It is great to be involved in a design that has such high visibility within the town I live in.</p>
+            <p>Improving the UI of arrival information for riders is just straight up fun. It is great to be involved in a design that has such high visibility within the town I live in.</p>
             &nbsp;
             <h4>Problem:</h4>
             &nbsp;
             <p>With the consideration of upgrading our display screens out in the public, we needed a refresh to the new design. With new infrastructure came new capabilities.</p>
             &nbsp;
-            <Img className="my-4" fluid={data.oldTTImage.childImageSharp.fluid} />
+            <Img className="mt-4" fluid={data.oldTTImage.childImageSharp.fluid} />
+            <p className="mb-5 text-muted text-center small">Current look</p>
           </Col>
         </Row>
         {/* Onsite Transit Tracker continued */}
         <Row className='my-5'>
           <Col sm={{span:12}} md={{span:8, offset:2}}>
           <h5>Research:</h5>
+          &nbsp;
           <p>Questions we asked our riders:</p>
           &nbsp;
           <Row>
@@ -288,7 +290,7 @@ return (
               <div className="p-3 my-3 rounded border">
                 <h5 className="mb-3"><em>Is the current transit tracker useful?</em></h5>
                 <p className="small text-muted"><strong>Purpose of asking:</strong> So we can get a sense of any immediate red flags that people dislike about it. </p>
-                <p className="mb-0 small"><strong>Results:</strong> Yes, turns out people trust the information as being more reliable than third-party apps.</p>
+                <p className="mb-0 small"><strong>Results:</strong> Turns out people trust the information as being more reliable than third-party apps.</p>
               </div>
             </Col>
             <Col xs={{span:12}} sm={{span:6}}>
@@ -302,11 +304,11 @@ return (
           &nbsp;
           <h4>Design:</h4>
           &nbsp;
-          <p>With the knowledge we gained by simply asking riders, jump started the design. The two big improvements I wanted to solve was:</p>
+          <p>With the knowledge we gained by simply asking riders jump started the design. The three big improvements I wanted to solve was:</p>
           <ul>
             <li>Visibility, increasing contrast and improving the ADA compliance score.</li>
             <li>Context, at a glance users should understand where they are and where their next vehicle is.</li>
-            <li>Design, create something elegant.</li>
+            <li>Design, create something elegant that included an ad.</li>
           </ul>
           &nbsp;
           <Img className="mt-5" fluid={data.newTTImage.childImageSharp.fluid} />
@@ -318,9 +320,9 @@ return (
         <Row className='mb-5'>
           <Col sm={{span:12}} md={{span:8, offset:2}}>
             &nbsp;
-          <p>Hopefully the new design speaks for itself. But to summarize, in order to design reach new design requirements:</p>
+          <p>Hopefully the new design speaks for itself. But to summarize, in order to reach new design requirements:</p>
           <ul className='mb-5'>
-            <li>I continued down the dark scheme path because of how it does perform better with outside displays.</li>
+            <li>I continued down the dark scheme path because of how it does perform better with outside displays. Increase visibility with more information.</li>
             <li>I've included a <em>you are here</em> marker on a map to give users a sense of where they are and where their vehicle is if in the bounded area.</li>
           </ul>
           &nbsp;
@@ -340,22 +342,22 @@ return (
 
           <img className="my-5" src={trimetFly} alt="google earth fly through"/>
 
-          <p>My manager walks up to me one day and says, “I think it would be cool to have a visual for new service lines. Like a top down fly through.” Immediately I thought of the Google Earth flythrough tour feature.</p>
+          <p>My manager walks up to me one day and says, “I think it would be cool to have a visual for new service lines. Like a top down fly through.” Immediately I thought of the Google Earth's flythrough tour feature.</p>
           &nbsp;
           <h4>Problem:</h4>
           &nbsp;
-          <p>We needed a visually engaging way to show people about new service and how it connects people within the neighborhood to points of interest along the route. </p>
+          <p>We needed a visually engaging way to show people about new service, show how it connects people within the neighborhood and points of interest along the route. </p>
           &nbsp;
           <h4>Solution:</h4>
           &nbsp;
           <p>Using Google Earth's tour feature, produce a video highlighting useful places to know along the new service route.</p>
           &nbsp;
-          <h4>Process:</h4>
+          <h4>Challenges in the process:</h4>
           &nbsp;
           <p>Building the initial video was quite the challenge but having gone through the process, the second and third time around became much easier.</p> 
           <ol>
             <li>First challenge was making sure I spoke to the right people and stakeholders involved with marketing or building the service route; I needed to understand who the route was made for which influenced what exactly to highlight on the map given the video format.</li>
-            <li>Second, I wasn’t sure on the most efficient way to record and produce a fly through video. I had gone through a lot of trial and error working between Google Earth and After Effects but eventually I established workflow and a style/pattern for animating objects.</li>
+            <li>Second, I wasn’t sure on the most efficient way to record and produce a fly through video. I had gone through a lot of trial and error working between Google Earth and After Effects but eventually I established workflow for effective object tracking and a style/pattern for animating text objects.</li>
           </ol>
           <p className="mb-5">My favorite part was syncing it up all together with music.</p>
           <a className="my-5" target="_blank" rel="noopener noreferrer" href="https://www.youtube.com/watch?v=BO72XAPARzM&list=PLtJW_Q-z9fw8Q2b5tdBReibFKAVfOJEy6">Enjoy the Youtube playlist <FontAwesomeIcon icon={faExternalLinkAlt}></FontAwesomeIcon></a>
@@ -390,17 +392,14 @@ return (
         <Row className='my-5'>
           <Col sm={{span:12}} md={{span:8, offset:2}}>
             <h3 id="lowincomeregportal">Low Income Registration Portal</h3>
-          </Col>
-        </Row>
-        {/* Low Income Registration Portal image */}
-        <Row>
-          <Col sm={{span:12}}>
-          <Img fluid={data.lowIncPortalImage.childImageSharp.fluid} />
+            &nbsp;
+            <Img fluid={data.lowIncPortalImage.childImageSharp.fluid} />
             <p className="text-muted small text-center">Initial screen for registering a new applicant</p>
+            &nbsp;
           </Col>
         </Row>
         {/* Low Income Registration Portal Continued*/}
-        <Row className='my-5'>
+        <Row className='mb-5'>
           <Col sm={{span:12}} md={{span:8, offset:2}}>
             
             &nbsp;
@@ -426,11 +425,11 @@ return (
           <Col sm={{span:12}} md={{span:8, offset:2}}>
             <h3 id="pdxArrival">PDX Arrival Screens</h3>
             &nbsp;
-            <p>This project involved working with The Port of Portland and our internal IT department. My main role in this project was UX design and to support our senior developer with front-end development with Reactjs.</p>
+            <p>This project involved working with The Port of Portland and our internal IT department. My main role in this project was lead UX designer and to support our senior developer with front-end Reactjs development.</p>
             &nbsp;
             <h4>Problem:</h4>
             &nbsp;
-            <p>At PDX, TriMet’s Red Line services people between the airport and downtown Portland. Prior to the project we did not have any arrival/departure times for the MAX.</p>
+            <p>At PDX, TriMet’s MAX Red Line services people between the airport and downtown Portland. Prior to the project we did not have any onsite arrival/departure times for the MAX.</p>
             &nbsp;
             <h4>Solution:</h4>
             &nbsp;
@@ -439,7 +438,7 @@ return (
             &nbsp;
             <h4>Design:</h4>
             &nbsp;
-            <p>The only requirement was that the screen we designed had to account for portrait and landscape 16:9 ratio responsiveness. The way our process went, warranted two phase implementation of the design. First to test feasibility, second to apply more data to the sreen.</p>
+            <p>The only requirement was that the screen we designed had to account for portrait and landscape, 16:9 aspect ratio, and have reasonable responsiveness for screens 29 - 36 inch screens. The way our process went, warranted a two phases. First to test feasibility, second to apply more data to the display.</p>
             &nbsp;
             </Col>
           </Row>
@@ -457,7 +456,7 @@ return (
             &nbsp;
             <p>We landed on the Version 1 design for the first phase. This included iconography of MAX Light rail, arrival times, current time and TriMet branding.</p>
             &nbsp;
-            <h4>Phase II: More branding, plus alerts</h4>
+            <h4>Phase II: More branding, plus alerts!</h4>
             &nbsp;
             <p>The second phase we used Version 2 and had new considerations that affected the design. </p>
             &nbsp;
@@ -466,13 +465,14 @@ return (
               <li>People may not know that they are looking at realtime information at a glance. Include a pulsing dot in vehicle arrival block if time is estimated.</li>
               <li>We have alert information! Created two alert layouts, one for a regular alert, another for a priority alert.</li>
               <li>People are viewing this from a far, we need to account for that. Changed each arrival to have their own capsule, went darker on the background color but not pure black.</li>
+              <li>Disruption in service is common, it made sense to provide service alert information if service is affected.</li>
             </ul>
             &nbsp;
             
             &nbsp;
             <h4>Result:</h4>
             <Img className="my-5" fluid={data.pdxRealScreenImage.childImageSharp.fluid} fadeIn={true} style={{maxWidth:"400px"}}/>
-            <p className="mb-5">In the end, we wanted something simple and effective. We already have plans for phase #3, maps, real-time vehicle locations, and more.</p>
+            <p className="mb-5">In the end, we wanted something simple and effective. We already have plans for phase III, maps, real-time vehicle locations, and more.</p>
             <a target="_blank" rel="noopener noreferrer" href="https://xd.adobe.com/spec/62aea832-a8b0-4905-69b9-d0c37f2c6044-149f/grid">Enjoy the prototype for Phase II design <FontAwesomeIcon icon={faExternalLinkAlt}></FontAwesomeIcon></a>
           </Col>
         </Row>
@@ -503,17 +503,17 @@ return (
             <p>Before designing we considered a few things:</p>
             &nbsp;
             <ul>
-              <li>We noticed people don’t search for content by filtering content by category.</li>
-              <li>People usually would find our post from a direct link from search, social or email.</li>
+              <li>We noticed people didn't search for content by filtering by category but used search.</li>
+              <li>Content was found contextually. People usually would find particular posts from referral links from search, social or email. The front page was never the usual starting point.</li>
               <li>We weren't giving the signup for Riders Club the prominence it deserved.</li>
             </ul>
             &nbsp;
             <h4>Design:</h4>
             &nbsp;
-            <p>So what we did was make a lot of decisions before and committed to those constraints in the design in order to keep the blog as clean as possible. For example:</p>
+            <p>So what we did was make a lot of decisions before we startedand committed to those constraints in the design in order to keep the blog as clean as possible. For example:</p>
             &nbsp;
             <ul>
-              <li>In addition to not including a category list as navigation, we decided we didn’t need a menu either. This kept it clean at the top.</li>
+              <li>In addition to not including a category list as navigation, we decided we didn’t need a menu either, a home back button sufficed. This kept it extremely minimal at the top.</li>
               <li>We decided to keep getting rid of sharing options on blog post pages.</li>
               <li>We wanted to leverage our awesome pictures, so images needed to work well with text.</li>
               <li>Created a more large and in charge section for Riders Club signups.</li>
@@ -537,15 +537,11 @@ return (
             <h3 id="stylesGuide">Web Style Guide Lines</h3>
           </Col>
         </Row>
-        <Row>
-          <Col sm={{span:12}}>
-          <Img className="my-5" fluid={data.styleGuideImage.childImageSharp.fluid} fadeIn={true}/>
-          </Col>
-        </Row>
         {/* Web Style Guide Lines Continued*/}
         <Row className='mb-5'>
           <Col sm={{span:12}} md={{span:8, offset:2}}>
-           
+            <Img className="my-5" fluid={data.styleGuideImage.childImageSharp.fluid} fadeIn={true}/>
+            &nbsp;
             <p>Before working at TriMet, there was a style guide for print and general messaging but none specifically for digital design. This was my chance to establish a TriMet Design System.</p>
             &nbsp;
             <h4>Problem:</h4>
